@@ -2,7 +2,7 @@
 
 在同一个选择器里选择日期和时间
 
-:::tip
+
 DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 DatePicker 和 TimePicker。
 
 ##  日期和时间点
@@ -26,15 +26,6 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
       placeholder="选择日期时间"
       align="right"
       :shortcuts="shortcuts">
-    </ur-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">设置默认时间</span>
-    <ur-date-picker
-      v-model="value3"
-      type="datetime"
-      placeholder="选择日期时间"
-      :default-time="defaultTime">
     </ur-date-picker>
   </div>
 </template>
@@ -63,7 +54,6 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
         }],
         value1: '',
         value2: '',
-        value3: '',
         defaultTime: new Date(2000, 1, 1, 12, 0, 0) // '12:00:00'
       };
     }
@@ -137,53 +127,6 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
 </script>
 ```
 
-## 默认的起始与结束时刻
-
-使用`datetimerange`进行范围选择时，在日期选择面板中选定起始与结束的日期，默认会使用该日期的`00:00:00`作为起始与结束的时刻；通过选项`default-time`可以控制选中起始与结束日期时所使用的具体时刻。`default-time`接受一个数组，其中第一项控制起始日期的具体时刻，第二项控制结束日期的具体时刻。
-```html
-<template>
-  <div class="block">
-    <span class="demonstration">起始日期时刻为 12:00:00</span>
-    <ur-date-picker
-      v-model="value1"
-      type="datetimerange"
-      start-placeholder="开始日期"
-      end-placeholder="结束日期"
-      :default-time="defaultTime1">
-    </ur-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">起始日期时刻为 12:00:00，结束日期时刻为 08:00:00</span>
-    <ur-date-picker
-      v-model="value2"
-      type="datetimerange"
-      align="right"
-      start-placeholder="开始日期"
-      end-placeholder="结束日期"
-      :default-time="defaultTime2">
-    </ur-date-picker>
-  </div>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        value1: '',
-        value2: '',
-        defaultTime1: [
-          new Date(2000, 1, 1, 12, 0, 0),
-        ], // '12:00:00'
-        defaultTime2: [
-          new Date(2000, 1, 1, 12, 0, 0),
-          new Date(2000, 2, 1, 8, 0, 0)
-        ] // '12:00:00', '08:00:00'
-      };
-    }
-  };
-</script>
-```
-
 ## Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
@@ -192,25 +135,18 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
 | disabled | 禁用 | boolean | — | false |
 | editable | 文本框可输入 | boolean | — | true |
 | clearable | 是否显示清除按钮 | boolean | — | true |
-| size          | 输入框尺寸     | string          | large/medium/small/mini  | large |
 | placeholder | 非范围选择时的占位内容 | string | — | — |
 | start-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | end-placeholder | 范围选择时结束日期的占位内容 | string | — | — |
 | time-arrow-control | 是否使用箭头进行时间选择 | boolean | — | false |
 | type | 显示类型 | string | year/month/date/week/ datetime/datetimerange/daterange | date |
 | format | 显示在输入框中的格式 | string | 见[日期格式](#/zh-CN/component/date-picker#ri-qi-ge-shi) | YYYY-MM-DD HH:mm:ss |
-| align | 对齐方式 | string | left, center, right | left |
-| popper-class | DateTimePicker 下拉框的类名 | string | — | — |
-| range-separator | 选择范围时的分隔符 | string | - | '-' |
 | default-value | 可选，选择器打开时默认显示的时间 | Date | 可被`new Date()`解析 | — |
 | default-time | 选中日期后的默认具体时刻 | Date / 范围选择时：Date[] | 非范围选择时：Date 对象；范围选择时：数组，长度为 2，每项值为 Date 对象，第一项指定开始日期的时刻，第二项指定结束日期的时刻。不指定会使用时刻 `00:00:00` | — |
 | name | 原生属性 | string | — | — |
 | unlink-panels | 在范围选择器里取消两个日期面板之间的联动 | boolean | — | false |
-| prefix-icon | 自定义头部图标的类名 | string | — | ur-icon-date |
-| clear-icon | 自定义清空图标的类名 | string | — | ur-icon-circle-close |
 | shortcuts | 设置快捷选项，需要传入数组对象 | object[{ text: string, value: Date }] | — | — |
 | disabledDate | 设置禁用状态，参数为当前日期，要求返回 Boolean | Function | — | — |
-| cellClassName | 设置日期的 className | Function(Date) | — | — |
 
 ## Events
 | Event Name | Description | Parameters |

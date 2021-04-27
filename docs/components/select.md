@@ -24,19 +24,19 @@
       return {
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: '选项1'
         }, {
           value: '选项2',
-          label: '双皮奶'
+          label: '选项2'
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: '选项3'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: '选项4'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: '选项5'
         }],
         value: ''
       }
@@ -67,20 +67,20 @@
       return {
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: '选项1'
         }, {
           value: '选项2',
-          label: '双皮奶',
+          label: '选项2',
           disabled: true
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: '选项3'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: '选项4'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: '选项5'
         }],
         value: ''
       }
@@ -112,19 +112,19 @@
       return {
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: '选项1'
         }, {
           value: '选项2',
-          label: '双皮奶'
+          label: '选项2'
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: '选项3'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: '选项4'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: '选项5'
         }],
         value: ''
       }
@@ -156,19 +156,19 @@
       return {
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: '选项1'
         }, {
           value: '选项2',
-          label: '双皮奶'
+          label: '选项2'
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: '选项3'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: '选项4'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: '选项5'
         }],
         value: ''
       }
@@ -214,19 +214,19 @@
       return {
         options: [{
           value: '选项1',
-          label: '黄金糕'
+          label: '选项1'
         }, {
           value: '选项2',
-          label: '双皮奶'
+          label: '选项2'
         }, {
           value: '选项3',
-          label: '蚵仔煎'
+          label: '选项3'
         }, {
           value: '选项4',
-          label: '龙须面'
+          label: '选项4'
         }, {
           value: '选项5',
-          label: '北京烤鸭'
+          label: '选项5'
         }],
         value1: [],
         value2: []
@@ -235,278 +235,6 @@
   }
 </script>
 ```
-
-## 自定义模板
-
-可以自定义备选项
-
-将自定义的 HTML 模板插入`ur-option`的 slot 中即可。
-```html
-<template>
-  <ur-select v-model="value" placeholder="请选择">
-    <ur-option
-      v-for="item in cities"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-      <span style="float: left">{{ item.label }}</span>
-      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
-    </ur-option>
-  </ur-select>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        cities: [{
-          value: 'Beijing',
-          label: '北京'
-        }, {
-          value: 'Shanghai',
-          label: '上海'
-        }, {
-          value: 'Nanjing',
-          label: '南京'
-        }, {
-          value: 'Chengdu',
-          label: '成都'
-        }, {
-          value: 'Shenzhen',
-          label: '深圳'
-        }, {
-          value: 'Guangzhou',
-          label: '广州'
-        }],
-        value: ''
-      }
-    }
-  }
-</script>
-```
-
-## 分组
-
-备选项进行分组展示
-
-使用`ur-option-group`对备选项进行分组，它的`label`属性为分组名
-```html
-<template>
-  <ur-select v-model="value" placeholder="请选择">
-    <ur-option-group
-      v-for="group in options"
-      :key="group.label"
-      :label="group.label">
-      <ur-option
-        v-for="item in group.options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value">
-      </ur-option>
-    </ur-option-group>
-  </ur-select>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        options: [{
-          label: '热门城市',
-          options: [{
-            value: 'Shanghai',
-            label: '上海'
-          }, {
-            value: 'Beijing',
-            label: '北京'
-          }]
-        }, {
-          label: '城市名',
-          options: [{
-            value: 'Chengdu',
-            label: '成都'
-          }, {
-            value: 'Shenzhen',
-            label: '深圳'
-          }, {
-            value: 'Guangzhou',
-            label: '广州'
-          }, {
-            value: 'Dalian',
-            label: '大连'
-          }]
-        }],
-        value: ''
-      }
-    }
-  }
-</script>
-```
-
-## 可搜索
-
-可以利用搜索功能快速查找选项
-
-为`ur-select`添加`filterable`属性即可启用搜索功能。默认情况下，Select 会找出所有`label`属性包含输入值的选项。如果希望使用其他的搜索逻辑，可以通过传入一个`filter-method`来实现。`filter-method`为一个`Function`，它会在输入值发生变化时调用，参数为当前输入值。
-```html
-<template>
-  <ur-select v-model="value" filterable placeholder="请选择">
-    <ur-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </ur-option>
-  </ur-select>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        options: [{
-          value: '选项1',
-          label: '黄金糕'
-        }, {
-          value: '选项2',
-          label: '双皮奶'
-        }, {
-          value: '选项3',
-          label: '蚵仔煎'
-        }, {
-          value: '选项4',
-          label: '龙须面'
-        }, {
-          value: '选项5',
-          label: '北京烤鸭'
-        }],
-        value: ''
-      }
-    }
-  }
-</script>
-```
-
-## 远程搜索
-
-从服务器搜索数据，输入关键字进行查找
-为了启用远程搜索，需要将`filterable`和`remote`设置为`true`，同时传入一个`remote-method`。`remote-method`为一个`Function`，它会在输入值发生变化时调用，参数为当前输入值。需要注意的是，如果`ur-option`是通过`v-for`指令渲染出来的，此时需要为`ur-option`添加`key`属性，且其值需具有唯一性，比如此例中的`item.value`。
-```html
-<template>
-  <ur-select
-    v-model="value"
-    multiple
-    filterable
-    remote
-    reserve-keyword
-    placeholder="请输入关键词"
-    :remote-method="remoteMethod"
-    :loading="loading">
-    <ur-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </ur-option>
-  </ur-select>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        options: [],
-        value: [],
-        list: [],
-        loading: false,
-        states: ["Alabama", "Alaska", "Arizona",
-        "Arkansas", "California", "Colorado",
-        "Connecticut", "Delaware", "Florida",
-        "Georgia", "Hawaii", "Idaho", "Illinois",
-        "Indiana", "Iowa", "Kansas", "Kentucky",
-        "Louisiana", "Maine", "Maryland",
-        "Massachusetts", "Michigan", "Minnesota",
-        "Mississippi", "Missouri", "Montana",
-        "Nebraska", "Nevada", "New Hampshire",
-        "New Jersey", "New Mexico", "New York",
-        "North Carolina", "North Dakota", "Ohio",
-        "Oklahoma", "Oregon", "Pennsylvania",
-        "Rhode Island", "South Carolina",
-        "South Dakota", "Tennessee", "Texas",
-        "Utah", "Vermont", "Virginia",
-        "Washington", "West Virginia", "Wisconsin",
-        "Wyoming"]
-      }
-    },
-    mounted() {
-      this.list = this.states.map(item => {
-        return { value: `value:${item}`, label: `label:${item}` };
-      });
-    },
-    methods: {
-      remoteMethod(query) {
-        if (query !== '') {
-          this.loading = true;
-          setTimeout(() => {
-            this.loading = false;
-            this.options = this.list.filter(item => {
-              return item.label.toLowerCase()
-                .indexOf(query.toLowerCase()) > -1;
-            });
-          }, 200);
-        } else {
-          this.options = [];
-        }
-      }
-    }
-  }
-</script>
-```
-
-## 创建条目
-可以创建并选中选项中不存在的条目
-使用`allow-create`属性即可通过在输入框中输入文字来创建新的条目。注意此时`filterable`必须为真。本例还使用了`default-first-option`属性，在该属性打开的情况下，按下回车就可以选中当前选项列表中的第一个选项，无需使用鼠标或键盘方向键进行定位。
-```html
-<template>
-  <ur-select
-    v-model="value"
-    multiple
-    filterable
-    allow-create
-    default-first-option
-    placeholder="请选择文章标签">
-    <ur-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </ur-option>
-  </ur-select>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        options: [{
-          value: 'HTML',
-          label: 'HTML'
-        }, {
-          value: 'CSS',
-          label: 'CSS'
-        }, {
-          value: 'JavaScript',
-          label: 'JavaScript'
-        }],
-        value: []
-      }
-    }
-  }
-</script>
-```
-
-:::tip
-如果 Select 的绑定值为对象类型，请务必指定 `value-key` 作为它的唯一性标识。
 
 ## Select Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -522,21 +250,7 @@
 | name | select input 的 name 属性 | string | — | — |
 | autocomplete | select input 的 autocomplete 属性 | string | — | off |
 | placeholder | 占位符 | string | — | 请选择 |
-| filterable | 是否可搜索 | boolean | — | false |
-| allow-create | 是否允许用户创建新条目，需配合 `filterable` 使用 | boolean | — | false |
-| filter-method | 自定义搜索方法 | function | — | — |
-| remote | 是否为远程搜索 | boolean | — | false |
-| remote-method | 远程搜索方法 | function | — | — |
-| loading | 是否正在从远程获取数据 | boolean | — | false |
-| loading-text | 远程加载时显示的文字 | string | — | 加载中 |
-| no-match-text | 搜索条件无匹配时显示的文字，也可以使用`#empty`设置 | string | — | 无匹配数据 |
 | no-data-text | 选项为空时显示的文字，也可以使用`#empty`设置 | string | — | 无数据 |
-| popper-class | Select 下拉框的类名 | string | — | — |
-| reserve-keyword | 多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词 | boolean | — | false |
-| default-first-option | 在输入框按下回车，选择第一个匹配项。需配合 `filterable` 或 `remote` 使用 | boolean | - | false |
-| popper-append-to-body | 是否将弹出框插入至 body 元素。在弹出框的定位出现问题时，可将该属性设置为 false | boolean | - | false |
-| automatic-dropdown | 对于不可搜索的 Select，是否在输入框获得焦点后自动弹出选项菜单 | boolean | - | false |
-| clear-icon | 自定义清空图标的类名 | string | — | ur-icon-circle-close |
 
 ## Select Events
 | 事件名称 | 说明 | 回调参数 |

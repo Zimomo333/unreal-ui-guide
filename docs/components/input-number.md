@@ -65,25 +65,6 @@
 </script>
 ```
 
-## 严格步数
-
-`step-strictly`属性接受一个`Boolean`。如果这个属性被设置为`true`，则只能输入步数的倍数。
-
-```html
-<template>
-  <ur-input-number v-model="num" :step="2" step-strictly></ur-input-number>
-</template>
-<script>
-  export default {
-    data() {
-      return {
-        num: 2
-      }
-    }
-  };
-</script>
-```
-
 ## 精度
 
 设置 `precision` 属性可以控制数值精度，接收一个 `Number`。
@@ -103,36 +84,10 @@
 </script>
 ```
 
-
 :::tip
 `precision` 的值必须是一个非负整数，并且不能小于 `step` 的小数位数。
 
-## 尺寸
-
-额外提供了 `medium`、`small`、`mini` 三种尺寸的数字输入框
-
-
-
-```html
-<template>
-  <ur-input-number v-model="num1"></ur-input-number>
-  <ur-input-number size="medium" v-model="num2"></ur-input-number>
-  <ur-input-number size="small" v-model="num3"></ur-input-number>
-  <ur-input-number size="mini" v-model="num4"></ur-input-number>
-</template>
-<script>
-  export default {
-    data() {
-      return {
-        num1: 1,
-        num2: 1,
-        num3: 1,
-        num4: 1
-      }
-    }
-  };
-</script>
-```
+:::
 
 ## 按钮位置
 
@@ -164,11 +119,9 @@
 | min      | 设置计数器允许的最小值 | number | — | -Infinity |
 | max      | 设置计数器允许的最大值 | number | — | Infinity |
 | step     | 计数器步长           | number   | — | 1 |
-| step-strictly | 是否只能输入 step 的倍数 | boolean   | — | false |
 | precision| 数值精度             | number   | — | — |
 | size     | 计数器尺寸           | string   | large/medium/small/mini  | large |
 | disabled | 是否禁用计数器        | boolean | — | false |
-| controls | 是否使用控制按钮        | boolean | — | true |
 | controls-position | 控制按钮位置 | string | right | - |
 | name | 原生属性 | string | — | — |
 | label | 输入框关联的label文字 | string | — | — |

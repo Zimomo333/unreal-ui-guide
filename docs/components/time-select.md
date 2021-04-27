@@ -69,11 +69,8 @@
 | value / v-model | 绑定值 | string | — | — |
 | editable | 文本框可输入 | boolean | — | true |
 | clearable | 是否显示清除按钮 | boolean | — | true |
-| size          | 输入框尺寸     | string          | medium / small / mini  | — |
 | placeholder | 非范围选择时的占位内容 | string | — | — |
 | name | 原生属性 | string | — | — |
-| prefix-icon | 自定义头部图标的类名 | string | — | ur-icon-time |
-| clear-icon | 自定义清空图标的类名 | string | — | ur-icon-circle-close |
 | start | 开始时间 | string | — | 09:00 |
 | end | 结束时间 | string | — | 18:00 |
 | step | 间隔时间 | string | — | 00:30 |

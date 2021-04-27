@@ -274,7 +274,7 @@ UnrealUI 为 ``app.config.globalProperties`` 添加了全局方法 `$notify`。�
 ## 单独引用
 
 ```javascript
-import { ElNotification } from 'element-plus';
+import { ElNotification } from 'unreal-ui-next';
 ```
 
 此时调用方法为 `ElNotification(options)`。我们也为每个 type 定义了各自的方法，如 `ElNotification.success(options)`。并且可以调用 `ElNotification.closeAll()` 手动关闭所有实例。
