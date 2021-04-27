@@ -106,6 +106,9 @@ export default defineConfig({
           resolveStyle: (name) => {
             return `unreal-ui-next/lib/${name}/style.css`;
           },
+          resolveComponent: (name) => {
+            return `unreal-ui-next/lib/${name}`;
+          },
         }
       ]
     })

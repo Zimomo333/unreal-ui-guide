@@ -81,7 +81,7 @@
 
 
 
-## Checkbox Attributes
+## Checkbox 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
@@ -90,12 +90,12 @@
 | name | 原生 name 属性 | string    |      —         |     —    |
 | checked  | 当前是否勾选    | boolean   |  — | false   |
 
-## Checkbox Events
+## Checkbox 事件
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
 | change  | 当绑定值变化时触发的事件 | 更新后的值 |
 
-## Checkbox-group Attributes
+## Checkbox-group 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | array | — | — |
@@ -103,7 +103,7 @@
 | min     | 可被勾选的 checkbox 的最小数量   | number    |       —        |     —    |
 | max     | 可被勾选的 checkbox 的最大数量   | number    |       —        |     —    |
 
-## Checkbox-group Events
+## Checkbox-group 事件
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
 | change  | 当绑定值变化时触发的事件 | 更新后的值 |

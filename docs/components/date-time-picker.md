@@ -127,7 +127,7 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
 </script>
 ```
 
-## Attributes
+## 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date(DateTimePicker) / array(DateTimeRangePicker) | — | — |
@@ -148,19 +148,19 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
 | shortcuts | 设置快捷选项，需要传入数组对象 | object[{ text: string, value: Date }] | — | — |
 | disabledDate | 设置禁用状态，参数为当前日期，要求返回 Boolean | Function | — | — |
 
-## Events
-| Event Name | Description | Parameters |
+## 事件
+| 事件名 | 说明 | 参数 |
 |---------|--------|---------|
 | change | 用户确认选定的值时触发 | 组件绑定值 |
 | blur | 当 input 失去焦点时触发 | 组件实例 |
 | focus | 当 input 获得焦点时触发 | 组件实例 |
 
-## Methods
+## 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | — |
 
-## Slots
+## 插槽
 | Name    | 说明         |
 |---------|-------------|
 | range-separator  | 自定义分隔符 |

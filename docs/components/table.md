@@ -781,7 +781,7 @@
 </script>
 ```
 
-## Table Attributes
+## Table 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | data | 显示的数据 | array | — | — |
@@ -818,7 +818,7 @@
 | load        | 加载子节点数据的函数，lazy 为 true 时生效，函数第二个参数包含了节点的层级信息 | Function(row, treeNode, resolve) | — | — |
 | tree-props  | 渲染嵌套数据的配置选项 | Object | — | { hasChildren: 'hasChildren', children: 'children' } |
 
-## Table Events
+## Table 事件
 | 事件名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | select | 当用户手动勾选数据行的 Checkbox 时触发的事件 | selection, row |
@@ -839,7 +839,7 @@
 | header-dragend | 当拖动表头改变了列的宽度的时候会触发该事件 | newWidth, oldWidth, column, event |
 | expand-change  | 当用户对某一行展开或者关闭的时候会触发该事件（展开行时，回调的第二个参数为 expandedRows；树形表格时第二参数为 expanded） | row, (expandedRows \| expanded) |
 
-## Table Methods
+## Table 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | clearSelection | 用于多选表格，清空用户的选择 | — |
@@ -852,12 +852,12 @@
 | doLayout | 对 Table 进行重新布局。当 Table 或其祖先元素由隐藏切换为显示时，可能需要调用此方法 | — |
 | sort | 手动对 Table 进行排序。参数`prop`属性指定排序列，`order`指定排序顺序。 | prop: string, order: string |
 
-## Table Slot
+## Table 插槽
 | name | 说明 |
 |------|--------|
 | append | 插入至表格最后一行之后的内容，如果需要对表格的内容进行无限滚动操作，可能需要用到这个 slot。若表格有合计行，该 slot 会位于合计行之上。 |
 
-## Table-column Attributes
+## Table-column 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | type | 对应列的类型。如果设置了 `selection` 则显示多选框；如果设置了 `index` 则显示该行的索引（从 1 开始计算）；如果设置了 `expand` 则显示为一个可展开的按钮 | string | selection/index/expand | — |
@@ -888,7 +888,7 @@
 | filter-method | 数据过滤使用的方法，如果是多选的筛选项，对每一条数据会执行多次，任意一次返回 true 就会显示。 | Function(value, row, column) | — | — |
 | filtered-value | 选中的数据过滤项，如果需要自定义表头过滤的渲染方式，可能会需要此属性。 | Array | — | — |
 
-## Table-column Scoped Slot
+## Table-column Scoped 插槽
 | name | 说明 |
 |------|--------|
 | — | 自定义列的内容，参数为 { row, column, $index } |

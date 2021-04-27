@@ -9,73 +9,49 @@
 结合使用`ur-carousel`和`ur-carousur-item`标签就得到了一个走马灯。幻灯片的内容是任意的，需要放在`ur-carousur-item`标签中。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置`trigger`属性为`click`，可以达到点击触发的效果。
 ```html
 <template>
-  <div class="block">
-    <span class="demonstration">默认 Hover 指示器触发</span>
-    <ur-carousel height="150px">
-      <ur-carousur-item v-for="item in 4" :key="item">
-        <h3 class="small">{{ item }}</h3>
-      </ur-carousur-item>
-    </ur-carousel>
-  </div>
-  <div class="block">
-    <span class="demonstration">Click 指示器触发</span>
-    <ur-carousel trigger="click" height="150px">
-      <ur-carousur-item v-for="item in 4" :key="item">
-        <h3 class="small">{{ item }}</h3>
-      </ur-carousur-item>
-    </ur-carousel>
-  </div>
-</template>
+  <ur-carousel class="carousel-demo" direction="horizontal">
+    <ur-carousel-item v-for="item in items" :key="item.id">
+      <img :src="item.imgSrc" />
+    </ur-carousel-item>
+  </ur-carousel>
 
-<style>
-  .ur-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
-
-  .ur-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
-  }
-
-  .ur-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
-  }
-</style>
-```
-
-## 指示器
-
-可以将指示器的显示位置设置在容器外部
-
-`indicator-position`属性定义了指示器的位置。默认情况下，它会显示在走马灯内部，设置为`outside`则会显示在外部；设置为`none`则不会显示指示器。
-```html
-<template>
-  <ur-carousel indicator-position="outside">
-    <ur-carousur-item v-for="item in 4" :key="item">
-      <h3>{{ item }}</h3>
-    </ur-carousur-item>
+  <ur-carousel class="carousel-demo" direction="horizontal" trigger="click">
+    <ur-carousel-item v-for="item in items" :key="item.id">
+      <img :src="item.imgSrc" />
+    </ur-carousel-item>
   </ur-carousel>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          imgSrc: image1,
+        },
+        {
+          id: 2,
+          imgSrc: image2,
+        },
+        {
+          id: 3,
+          imgSrc: image3,
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <style>
-  .ur-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-  }
-
-  .ur-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .ur-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+.carousel-demo {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
 </style>
 ```
 
@@ -85,61 +61,43 @@
 `arrow`属性定义了切换箭头的显示时机。默认情况下，切换箭头只有在鼠标 hover 到走马灯上时才会显示；若将`arrow`设置为`always`，则会一直显示；设置为`never`，则会一直隐藏。
 ```html
 <template>
-  <ur-carousel :interval="5000" arrow="always">
-    <ur-carousur-item v-for="item in 4" :key="item">
-      <h3>{{ item }}</h3>
-    </ur-carousur-item>
+ <ur-carousel class="carousel-demo" direction="horizontal" trigger="click" arrow="always">
+    <ur-carousel-item v-for="item in items" :key="item.id">
+      <img :src="item.imgSrc" />
+    </ur-carousel-item>
   </ur-carousel>
 </template>
 
-<style>
-  .ur-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-  }
-
-  .ur-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .ur-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
-</style>
-```
-
-## 卡片化
-当页面宽度方向空间空余，但高度方向空间匮乏时，可使用卡片风格
-
-将`type`属性设置为`card`即可启用卡片模式。从交互上来说，卡片模式和一般模式的最大区别在于，可以通过直接点击两侧的幻灯片进行切换。
-```html
-<template>
-  <ur-carousel :interval="4000" type="card" height="200px">
-    <ur-carousur-item v-for="item in 6" :key="item">
-      <h3 class="medium">{{ item }}</h3>
-    </ur-carousur-item>
-  </ur-carousel>
-</template>
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          imgSrc: image1,
+        },
+        {
+          id: 2,
+          imgSrc: image2,
+        },
+        {
+          id: 3,
+          imgSrc: image3,
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
-  .ur-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-
-  .ur-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .ur-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+.carousel-demo {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
 </style>
 ```
 
@@ -148,33 +106,47 @@
 
 ```html
 <template>
-  <ur-carousel height="200px" direction="vertical" :autoplay="false">
-    <ur-carousur-item v-for="item in 3" :key="item">
-      <h3 class="medium">{{ item }}</h3>
-    </ur-carousur-item>
+ <ur-carousel class="carousel-demo" direction="vertical" trigger="click">
+    <ur-carousel-item v-for="item in items" :key="item.id">
+      <img :src="item.imgSrc" />
+    </ur-carousel-item>
   </ur-carousel>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          imgSrc: image1,
+        },
+        {
+          id: 2,
+          imgSrc: image2,
+        },
+        {
+          id: 3,
+          imgSrc: image3,
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <style>
-  .ur-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-
-  .ur-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .ur-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+.carousel-demo {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
 </style>
 ```
 
-## Carousel Attributes
+## Carousel 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | height | 走马灯的高度 | string | — | — |
@@ -184,24 +156,23 @@
 | interval | 自动切换的时间间隔，单位为毫秒 | number | — | 3000 |
 | indicator-position | 指示器的位置 | string | outside/none | — |
 | arrow | 切换箭头的显示时机 | string | always/hover/never | hover |
-| type | 走马灯的类型 | string | card | — |
 | loop | 是否循环显示 | boolean | - | true |
 | direction | 走马灯展示的方向 | string | horizontal/vertical | horizontal |
 | pause-on-hover | 鼠标悬浮时暂停自动切换 | boolean | - | true |
 
-## Carousel Events
+## Carousel 事件
 | 事件名称 | 说明 | 回调参数 |
 |---------|---------|---------|
 | change | 幻灯片切换时触发 | 目前激活的幻灯片的索引，原幻灯片的索引 |
 
-## Carousel Methods
+## Carousel 方法
 | 方法名      | 说明          | 参数 |
 |---------- |-------------- | -- |
 | setActiveItem | 手动切换幻灯片 | 需要切换的幻灯片的索引，从 0 开始；或相应 `ur-carousur-item` 的 `name` 属性值 |
 | prev | 切换至上一张幻灯片 | — |
 | next | 切换至下一张幻灯片 | — |
 
-## Carousur-Item Attributes
+## Carousur-Item 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | name | 幻灯片的名字，可用作 `setActiveItem` 的参数 | string | — | — |

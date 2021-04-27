@@ -240,7 +240,7 @@ export default defineComponent ({
 </script>
 ```
 
-## Input Attributes
+## Input 属性
 
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
@@ -265,7 +265,7 @@ export default defineComponent ({
 | autofocus | 原生属性，自动获取焦点 | boolean | true, false | false |
 | form | 原生属性 | string | — | — |
 
-## Input Slots
+## Input 插槽
 | name | 说明 |
 |------|--------|
 | prefix | 输入框头部内容，只对 `type="text"` 有效 |
@@ -273,7 +273,7 @@ export default defineComponent ({
 | prepend | 输入框前置内容，只对 `type="text"` 有效 |
 | append | 输入框后置内容，只对 `type="text"` 有效 |
 
-## Input Events
+## Input 事件
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|
 | blur | 在 Input 失去焦点时触发 | (event: Event) |
@@ -282,7 +282,7 @@ export default defineComponent ({
 | input | 在 Input 值改变时触发 | (value: string \| number) |
 | clear | 在点击由 `clearable` 属性生成的清空按钮时触发 | — |
 
-## Input Methods
+## Input 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | — |

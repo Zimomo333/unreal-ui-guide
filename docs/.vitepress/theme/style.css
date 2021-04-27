@@ -3,10 +3,16 @@
   --c-white-dark: #e6e7ee;
   --c-divider-light: #d1d9e6;
   --c-divider-dark: #d1d9e6;
+  --header-height: 4.8rem;
+}
+
+.container {
+  max-width: 70rem !important;
 }
 
 .nav-bar-title {
-  padding: .2rem .65rem;
+  font-size: 1.6rem !important;
+  padding: .1rem .65rem .3rem;
   border: 0.0625rem solid #D1D9E6;
   border-radius: 0.55rem;
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
@@ -35,6 +41,10 @@ a.item.isExternal {
   border-width: .2rem;
   border-radius: 0.55rem;
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+}
+
+nav.nav-links {
+  padding: 0 !important;
 }
 
 table {

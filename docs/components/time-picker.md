@@ -83,7 +83,7 @@
 </script>
 ```
 
-## Attributes
+## 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date | — | — |
@@ -99,14 +99,14 @@
 | default-value | 可选，选择器打开时默认显示的时间 | Date(TimePicker) / string(TimeSelect) | 可被`new Date()`解析(TimePicker) / 可选值(TimeSelect) | — |
 | name | 原生属性 | string | — | — |
 
-## Events
+## 事件
 | 事件名 | 说明 | 参数 |
 |---------|--------|---------|
 | change | 用户确认选定的值时触发 | 组件绑定值 |
 | blur | 当 input 失去焦点时触发 | 组件实例 |
 | focus | 当 input 获得焦点时触发 | 组件实例 |
 
-## Methods
+## 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | - |

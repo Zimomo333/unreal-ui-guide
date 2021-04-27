@@ -16,26 +16,12 @@
 </ur-breadcrumb>
 ```
 
-## 图标分隔符
-
-通过设置 `separator-class` 可使用相应的 `iconfont` 作为分隔符，注意这将使 `separator` 设置失效
-
-```html
-<ur-breadcrumb separator-class="ur-icon-arrow-right">
-  <ur-breadcrumb-item :to="{ path: '/' }">首页</ur-breadcrumb-item>
-  <ur-breadcrumb-item>活动管理</ur-breadcrumb-item>
-  <ur-breadcrumb-item>活动列表</ur-breadcrumb-item>
-  <ur-breadcrumb-item>活动详情</ur-breadcrumb-item>
-</ur-breadcrumb>
-```
-
-## Breadcrumb Attributes
+## Breadcrumb 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | separator | 分隔符 | string | — | 斜杠'/' |
-| separator-class | 图标分隔符 class | string | — | - |
 
-## Breadcrumb Item Attributes
+## Breadcrumb Item 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | to        | 路由跳转对象，同 `vue-router` 的 `to` | string/object | — | — |

@@ -74,7 +74,7 @@ Button 组件提供除了默认值以外的四种尺寸，可以在不同场景�
 <ur-button class="space" size="small" round>小型按钮</ur-button>
 <ur-button class="space" size="mini" round>迷你按钮</ur-button>
 ```
-## Attributes
+## 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | size     | 尺寸   | string  |   large / medium / small / mini |    —     |

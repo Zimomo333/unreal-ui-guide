@@ -71,7 +71,7 @@
 </script>
 ```
 
-## Attributes
+## 属性
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
@@ -82,12 +82,12 @@
 | active-value  | switch 打开时的值    | boolean / string / number | — | true |
 | inactive-value  | switch 关闭时的值    | boolean / string / number | — | false |
 
-## Events
+## 事件
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
 | change  | switch 状态发生变化时的回调函数    | 新状态的值 |
 
-## Methods
+## 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 Switch 获取焦点 | - |

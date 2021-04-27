@@ -47,82 +47,55 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 :::tip
 `before-close` 仅当用户通过点击关闭图标或遮罩关闭 Dialog 时起效。如果你在 `footer` 具名 slot 里添加了用于关闭 Dialog 的按钮，那么可以在按钮的点击回调函数里加入 `before-close` 的相关逻辑。
 
+:::
+
 ## 自定义内容
 
-Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下面是应用了 UnrealUI Table 和 Form 组件的两个样例。
+Dialog 组件的内容可以是任意的，甚至可以是表格，下面是应用了 UnrealUI Table 的样例。
 
 
 ```html
-<ur-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</ur-button>
+<template>
+  <ur-button @click="dialogTableVisible = true">打开嵌套表格的 Dialog</ur-button>
 
-<ur-dialog title="收货地址" v-model="dialogTableVisible">
-  <ur-table :data="gridData">
-    <ur-table-column property="date" label="日期" width="150"></ur-table-column>
-    <ur-table-column property="name" label="姓名" width="200"></ur-table-column>
-    <ur-table-column property="address" label="地址"></ur-table-column>
-  </ur-table>
-</ur-dialog>
-
-<!-- Form -->
-<ur-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</ur-button>
-
-<ur-dialog title="收货地址" v-model="dialogFormVisible">
-  <ur-form :model="form">
-    <ur-form-item label="活动名称" :labur-width="formLabelWidth">
-      <ur-input v-model="form.name" autocomplete="off"></ur-input>
-    </ur-form-item>
-    <ur-form-item label="活动区域" :labur-width="formLabelWidth">
-      <ur-select v-model="form.region" placeholder="请选择活动区域">
-        <ur-option label="区域一" value="shanghai"></ur-option>
-        <ur-option label="区域二" value="beijing"></ur-option>
-      </ur-select>
-    </ur-form-item>
-  </ur-form>
-  <template #footer>
-    <span class="dialog-footer">
-      <ur-button @click="dialogFormVisible = false">取 消</ur-button>
-      <ur-button type="primary" @click="dialogFormVisible = false">确 定</ur-button>
-    </span>
-  </template>
-</ur-dialog>
-
+  <ur-dialog title="收货地址" v-model="dialogTableVisible">
+    <ur-table :data="gridData">
+      <ur-table-column property="date" label="日期" width="150"></ur-table-column>
+      <ur-table-column property="name" label="姓名" width="200"></ur-table-column>
+      <ur-table-column property="address" label="地址"></ur-table-column>
+    </ur-table>
+  </ur-dialog>
+</template>
 <script>
-  export default {
-    data() {
-      return {
-        gridData: [{
+export default {
+  data() {
+    return {
+      gridData: [
+        {
           date: '2016-05-02',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
+          address: '上海市普陀区金沙江路 1518 弄',
+        },
+        {
           date: '2016-05-04',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
+          address: '上海市普陀区金沙江路 1518 弄',
+        },
+        {
           date: '2016-05-01',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
+          address: '上海市普陀区金沙江路 1518 弄',
+        },
+        {
           date: '2016-05-03',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }],
-        dialogTableVisible: false,
-        dialogFormVisible: false,
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+          address: '上海市普陀区金沙江路 1518 弄',
         },
-        formLabelWidth: '120px'
-      };
-    }
-  };
+      ],
+      dialogTableVisible: false,
+    };
+  },
+};
 </script>
 ```
 
@@ -143,7 +116,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
     <template #footer>
       <div class="dialog-footer">
         <ur-button @click="outerVisible = false">取 消</ur-button>
-        <ur-button type="primary" @click="innerVisible = true">打开内层 Dialog</ur-button>
+        <ur-button @click="innerVisible = true">打开内层 Dialog</ur-button>
       </div>
     </template>
   </ur-dialog>
@@ -161,91 +134,10 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 </script>
 ```
 
-## 居中布局
-
-标题和底部可水平居中
-
-将`center`设置为`true`即可使标题和底部居中。`center`仅影响标题和底部区域。Dialog 的内容是任意的，在一些情况下，内容并不适合居中布局。如果需要内容也水平居中，请自行为其添加 CSS。
-
-```html
-<ur-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</ur-button>
-
-<ur-dialog
-  title="提示"
-  v-model="centerDialogVisible"
-  width="30%"
-  center>
-  <span>需要注意的是内容是默认不居中的</span>
-  <template #footer>
-    <span class="dialog-footer">
-      <ur-button @click="centerDialogVisible = false">取 消</ur-button>
-      <ur-button type="primary" @click="centerDialogVisible = false">确 定</ur-button>
-    </span>
-  </template>
-
-</ur-dialog>
-
-<script>
-  export default {
-    data() {
-      return {
-        centerDialogVisible: false
-      };
-    }
-  };
-</script>
-```
-
-:::tip
-Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默认 slot 不会被渲染到 DOM 上。因此，如果需要执行 DOM 操作，或通过 `ref` 获取相应组件，请在 `open` 事件回调中进行。
-
-## 关闭时销毁 DOM 内容
-可在 Dialog 没有显示时，销毁 Dialog 里的内容以达到减少 DOM 节点的作用
-
-需要注意的是，当这个属性被启用时，Dialog 内并不会有任何的 DOM 节点存在，除了 `overlay` `header（如果有）` `footer（如果有）`
-
-```html
-<ur-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</ur-button>
-
-<ur-dialog
-  title="提示"
-  v-model="centerDialogVisible"
-  width="30%"
-  destroy-on-close
-  center>
-  <span>需要注意在 Dialog 打开前是这条内容和下面的内容都是不会被渲染的</span>
-  <strong>额外的内容</strong>
-  <template #footer>
-    <span class="dialog-footer">
-      <ur-button @click="centerDialogVisible = false">取 消</ur-button>
-      <ur-button type="primary" @click="centerDialogVisible = false">确 定</ur-button>
-    </span>
-  </template>
-
-</ur-dialog>
-
-<script>
-  export default {
-    data() {
-      return {
-        centerDialogVisible: false
-      };
-    }
-  };
-</script>
-
-```
-
-
-
-
-:::tip
-当使用 `modal` = false 时，请一定保证 `Dialog` 的 `append-to-body` 属性为 **true**, 因为 `Dialog` 的定位是通过 `position: relative` 来定位的，当 `modal` 不存在当时候，如果不将 `Dialog` 插入到 `Document.Body` 下，则会根据当前的位置进行定位，会导致样式错乱
-
-## Attributes
+## 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| modur-value / v-model   | 是否显示 Dialog | boolean | — | — |
+| model-value / v-model   | 是否显示 Dialog | boolean | — | — |
 | title     | Dialog 的标题，也可通过具名 slot （见下表）传入 | string    | — | — |
 | width     | Dialog 的宽度 | string / number    | — | 50% |
 | fullscreen     | 是否为全屏 Dialog | boolean    | — | false |
@@ -263,14 +155,14 @@ Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | center | 是否对头部和底部采用居中布局 | boolean | — | false |
 | destroy-on-close | 关闭时销毁 Dialog 中的元素 | boolean | — | false |
 
-## Slot
+## 插槽
 | name | 说明 |
 |------|--------|
 | — | Dialog 的内容 |
 | title | Dialog 标题区的内容 |
 | footer | Dialog 按钮操作区的内容 |
 
-## Events
+## 事件
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
 | open  | Dialog 打开的回调 | — |

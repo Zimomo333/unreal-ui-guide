@@ -236,7 +236,7 @@
 </script>
 ```
 
-## Select Attributes
+## Select 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean / object | — | — |
@@ -252,7 +252,7 @@
 | placeholder | 占位符 | string | — | 请选择 |
 | no-data-text | 选项为空时显示的文字，也可以使用`#empty`设置 | string | — | 无数据 |
 
-## Select Events
+## Select 事件
 | 事件名称 | 说明 | 回调参数 |
 |---------|---------|---------|
 | change | 选中值发生变化时触发 | 目前的选中值 |
@@ -262,27 +262,27 @@
 | blur | 当 input 失去焦点时触发 | (event: Event) |
 | focus | 当 input 获得焦点时触发 | (event: Event) |
 
-## Select Slots
+## Select 插槽
 |   name  | 说明     |
 |---------|---------|
 |    —    | Option 组件列表 |
 | prefix  | Select 组件头部内容 |
 | empty | 无选项时的列表 |
 
-## Option Group Attributes
+## Option Group 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | label | 分组的组名 | string | — | — |
 | disabled | 是否将该分组下所有选项置为禁用 | boolean | — | false |
 
-## Option Attributes
+## Option 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value | 选项的值 | string / number / boolean / object | — | — |
 | label | 选项的标签，若不设置则默认与 `value` 相同 | string/number | — | — |
 | disabled | 是否禁用该选项 | boolean | — | false |
 
-## Methods
+## 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | - |

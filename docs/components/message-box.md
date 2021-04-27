@@ -128,7 +128,7 @@ import { UrMessageBox } from 'unreal-ui-next';
 
 那么对应于上述四个全局方法的调用方法依次为：UrMessageBox, UrMessageBox.alert, UrMessageBox.confirm 和 UrMessageBox.prompt，调用参数与全局方法相同。
 
-## Options
+## 传参
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |

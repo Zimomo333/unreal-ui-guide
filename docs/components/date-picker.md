@@ -65,7 +65,7 @@
 </script>
 ```
 
-## Attributes
+## 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date(DatePicker) / array(DateRangePicker) | — | — |
@@ -84,14 +84,14 @@
 | unlink-panels | 在范围选择器里取消两个日期面板之间的联动 | boolean | — | false |
 | disabledDate | 设置禁用状态，参数为当前日期，要求返回 Boolean | Function | — | — |
 
-## Events
+## 事件
 | 事件名称      | 说明    | 回调参数      |
 |---------|--------|---------|
 | change | 用户确认选定的值时触发 | 组件绑定值 |
 | blur | 当 input 失去焦点时触发 | 组件实例 |
 | focus | 当 input 获得焦点时触发 | 组件实例 |
 
-## Methods
+## 方法
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | — |

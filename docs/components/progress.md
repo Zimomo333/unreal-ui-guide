@@ -114,7 +114,7 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 </style>
 ```
 
-## Attributes
+## 属性
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
 | **percentage** | **百分比（必填）**   | number         |     0-100          |     0    |
@@ -127,7 +127,7 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 | stroke-linecap  | circle 类型路径两端的形状 | string | butt/round/square | round |
 | format  | 指定进度条文字内容 | function(percentage) | — | — |
 
-## Slot
+## 插槽
 | name | 说明 |
 |------|--------|
 | default | 自定义内容，参数为 { percentage } |

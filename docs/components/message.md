@@ -60,7 +60,7 @@ import { UrMessage } from 'unreal-ui-next';
 
 此时调用方法为 `UrMessage(options)`。每个 type 也定义了各自的方法，如 `UrMessage.success(options)`。并且可以调用 `UrMessage.closeAll()` 手动关闭所有实例。
 
-## Options
+## 传参
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | message | 消息文字 | string / VNode | — | — |

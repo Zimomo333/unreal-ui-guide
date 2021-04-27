@@ -48,7 +48,7 @@
 ```
 
 
-## Radio Attributes
+## Radio 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
@@ -56,23 +56,23 @@
 | disabled  | 是否禁用    | boolean   | — | false   |
 | name | 原生 name 属性 | string    |      —         |     —    |
 
-## Radio Events
+## Radio 事件
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
 | change  | 绑定值变化时触发的事件 |  选中的 Radio label 值  |
 
-## Radio-group Attributes
+## Radio-group 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
 | disabled  | 是否禁用    | boolean   | — | false   |
 
-## Radio-group Events
+## Radio-group 事件
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
 | change  | 绑定值变化时触发的事件 |  选中的 Radio label 值  |
 
-## Radio-button Attributes
+## Radio-button 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | label     | Radio 的 value  | string / number  |        —       |     —    |
