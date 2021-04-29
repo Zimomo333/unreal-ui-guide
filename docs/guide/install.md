@@ -44,13 +44,13 @@ app.mount('#app')
 首先，安装 babel-plugin-import:
 
 ```bash
-$ npm install babel-plugin-import -D
+npm install babel-plugin-import -D
 ```
 
 或者
 
 ```bash
-$ yarn add babel-plugin-import -D
+yarn add babel-plugin-import -D
 ```
 
 然后，将 babel.config.js 修改为：
