@@ -133,22 +133,16 @@ import { UrMessageBox } from 'unreal-ui-next';
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title | MessageBox 标题 | string | — | — |
-| message | MessageBox 消息正文内容 | string / VNode | — | — |
+| message | MessageBox 消息正文内容 | string | — | — |
 | type | 消息类型，用于显示图标 | string | success / info / error | — |
-| callback | 若不使用 Promise，可以使用此参数指定 MessageBox 关闭后的回调 | function(action, instance)，action 的值为'confirm', 'cancel'或'close', instance 为 MessageBox 实例，可以通过它访问实例上的属性和方法 | — | — |
 | showClose | MessageBox 是否显示右上角关闭按钮 | boolean | — | true |
 | beforeClose | MessageBox 关闭前的回调，会暂停实例的关闭 | function(action, instance, done)，action 的值为'confirm', 'cancel'或'close'；instance 为 MessageBox 实例，可以通过它访问实例上的属性和方法；done 用于关闭 MessageBox 实例 | — | — |
-| distinguishCancelAndClose | 是否将取消（点击取消按钮）与关闭（点击关闭按钮或遮罩层、按下 ESC 键）进行区分 | boolean | — | false |
 | lockScroll | 是否在 MessageBox 出现时将 body 滚动锁定 | boolean | — | true |
 | showCancelButton | 是否显示取消按钮 | boolean | — | false（以 confirm 和 prompt 方式调用时为 true） |
 | showConfirmButton | 是否显示确定按钮 | boolean | — | true |
 | cancelButtonText | 取消按钮的文本内容 | string | — | 取消 |
 | confirmButtonText | 确定按钮的文本内容 | string | — | 确定 |
-| cancelButtonClass | 取消按钮的自定义类名 | string | — | — |
-| confirmButtonClass | 确定按钮的自定义类名 | string | — | — |
 | closeOnClickModal | 是否可通过点击遮罩关闭 MessageBox | boolean | — | true（以 alert 方式调用时为 false） |
-| closeOnPressEscape | 是否可通过按下 ESC 键关闭 MessageBox | boolean | — | true（以 alert 方式调用时为 false） |
-| closeOnHashChange | 是否在 hashchange 时关闭 MessageBox | boolean | — | true |
 | showInput | 是否显示输入框 | boolean | — | false（以 prompt 方式调用时为 true）|
 | inputPlaceholder | 输入框的占位符 | string | — | — |
 | inputType | 输入框的类型 | string | — | text |

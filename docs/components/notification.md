@@ -157,7 +157,7 @@ import { UrNotification } from 'unreal-ui-next';
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title | 标题 | string | — | — |
-| message | 说明文字 | string/Vue.VNode | — | — |
+| message | 说明文字 | string | — | — |
 | duration | 显示时间, 毫秒。设为 0 则不会自动关闭 | number | — | 4500 |
 | position | 自定义弹出位置 | string | top-right/top-left/bottom-right/bottom-left | top-right |
 | showClose | 是否显示关闭按钮 | boolean | — | true |
