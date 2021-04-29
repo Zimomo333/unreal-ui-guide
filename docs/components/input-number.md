@@ -120,11 +120,8 @@
 | max      | 设置计数器允许的最大值 | number | — | Infinity |
 | step     | 计数器步长           | number   | — | 1 |
 | precision| 数值精度             | number   | — | — |
-| size     | 计数器尺寸           | string   | large/medium/small/mini  | large |
 | disabled | 是否禁用计数器        | boolean | — | false |
 | controls-position | 控制按钮位置 | string | right | - |
-| name | 原生属性 | string | — | — |
-| label | 输入框关联的label文字 | string | — | — |
 | placeholder | 输入框默认 placeholder | string | - | - |
 
 ## 事件

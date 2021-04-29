@@ -87,7 +87,6 @@
 | value / v-model | 绑定值 | string / number / boolean | — | — |
 | label     | 选中状态的值（只有在`checkbox-group`或者绑定对象类型为`array`时有效）| string / number / boolean  |       —        |     —    |
 | disabled  | 是否禁用    | boolean   |  — | false   |
-| name | 原生 name 属性 | string    |      —         |     —    |
 | checked  | 当前是否勾选    | boolean   |  — | false   |
 
 ## Checkbox 事件

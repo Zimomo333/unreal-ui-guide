@@ -54,7 +54,6 @@
 | value / v-model | 绑定值 | string / number / boolean | — | — |
 | label     | Radio 的 value   | string / number / boolean    |       —        |      —   |
 | disabled  | 是否禁用    | boolean   | — | false   |
-| name | 原生 name 属性 | string    |      —         |     —    |
 
 ## Radio 事件
 | 事件名称 | 说明 | 回调参数 |
@@ -77,4 +76,3 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | label     | Radio 的 value  | string / number  |        —       |     —    |
 | disabled  | 是否禁用    | boolean   | — | false   |
-| name | 原生 name 属性 | string    |      —         |     —    |

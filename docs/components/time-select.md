@@ -70,7 +70,6 @@
 | editable | 文本框可输入 | boolean | — | true |
 | clearable | 是否显示清除按钮 | boolean | — | true |
 | placeholder | 非范围选择时的占位内容 | string | — | — |
-| name | 原生属性 | string | — | — |
 | start | 开始时间 | string | — | 09:00 |
 | end | 结束时间 | string | — | 18:00 |
 | step | 间隔时间 | string | — | 00:30 |

@@ -95,9 +95,11 @@
 | start-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | end-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | is-range | 是否为时间范围选择 | boolean | — | false |
-| format | 显示在输入框中的格式 | string | 见[日期格式](#/zh-CN/component/date-picker#ri-qi-ge-shi) | HH:mm:ss |
-| default-value | 可选，选择器打开时默认显示的时间 | Date(TimePicker) / string(TimeSelect) | 可被`new Date()`解析(TimePicker) / 可选值(TimeSelect) | — |
-| name | 原生属性 | string | — | — |
+| format | 显示在输入框中的格式 | string | HH（时）mm（分）ss（秒） | HH:mm:ss |
+| default-value | 可选，选择器打开时默认显示的时间 | date | — | — |
+| disabledHours | 禁止选择部分小时选项 | function | — | - |
+| disabledMinutes | 禁止选择部分分钟选项 | function(selectedHour) | — | - |
+| disabledSeconds | 禁止选择部分秒选项 | function(selectedHour, selectedMinute) | — | - |
 
 ## 事件
 | 事件名 | 说明 | 参数 |

@@ -138,13 +138,10 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，相关属性可以参照 D
 | placeholder | 非范围选择时的占位内容 | string | — | — |
 | start-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | end-placeholder | 范围选择时结束日期的占位内容 | string | — | — |
-| time-arrow-control | 是否使用箭头进行时间选择 | boolean | — | false |
-| type | 显示类型 | string | year/month/date/week/ datetime/datetimerange/daterange | date |
-| format | 显示在输入框中的格式 | string | 见[日期格式](#/zh-CN/component/date-picker#ri-qi-ge-shi) | YYYY-MM-DD HH:mm:ss |
+| type | 显示类型 | string | date / datetime / datetimerange | date |
+| format | 显示在输入框中的格式 | string | YYYY（年）MM（月）DD（日）<br>HH（时）mm（分）ss（秒） | YYYY-MM-DD HH:mm:ss |
 | default-value | 可选，选择器打开时默认显示的时间 | Date | 可被`new Date()`解析 | — |
 | default-time | 选中日期后的默认具体时刻 | Date / 范围选择时：Date[] | 非范围选择时：Date 对象；范围选择时：数组，长度为 2，每项值为 Date 对象，第一项指定开始日期的时刻，第二项指定结束日期的时刻。不指定会使用时刻 `00:00:00` | — |
-| name | 原生属性 | string | — | — |
-| unlink-panels | 在范围选择器里取消两个日期面板之间的联动 | boolean | — | false |
 | shortcuts | 设置快捷选项，需要传入数组对象 | object[{ text: string, value: Date }] | — | — |
 | disabledDate | 设置禁用状态，参数为当前日期，要求返回 Boolean | Function | — | — |
 

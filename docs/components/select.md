@@ -242,13 +242,9 @@
 | value / v-model | 绑定值 | string / number / boolean / object | — | — |
 | multiple | 是否多选 | boolean | — | false |
 | disabled | 是否禁用 | boolean | — | false |
-| value-key | 作为 value 唯一标识的键名，绑定值为对象类型时必填 | string | — | value |
-| size | 输入框尺寸 | string | medium/small/mini | — |
 | clearable | 是否可以清空选项 | boolean | — | false |
 | collapse-tags | 多选时是否将选中值按文字的形式展示 | boolean | — | false |
 | multiple-limit | 多选时用户最多可以选择的项目数，为 0 则不限制 | number | — | 0 |
-| name | select input 的 name 属性 | string | — | — |
-| autocomplete | select input 的 autocomplete 属性 | string | — | off |
 | placeholder | 占位符 | string | — | 请选择 |
 | no-data-text | 选项为空时显示的文字，也可以使用`#empty`设置 | string | — | 无数据 |
 
@@ -265,14 +261,11 @@
 ## Select 插槽
 |   name  | 说明     |
 |---------|---------|
-|    —    | Option 组件列表 |
-| prefix  | Select 组件头部内容 |
 | empty | 无选项时的列表 |
 
 ## Option Group 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| label | 分组的组名 | string | — | — |
 | disabled | 是否将该分组下所有选项置为禁用 | boolean | — | false |
 
 ## Option 属性
