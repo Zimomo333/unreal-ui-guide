@@ -78,7 +78,7 @@ Button 组件提供除了默认值以外的四种尺寸，可以在不同场景�
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | size     | 尺寸   | string  |   large / medium / small / mini |    —     |
-| type     | 类型   | string    |   primary / success / danger / info |     —    |
+| type     | 主题 | string    |   primary / success / danger / info |     —    |
 | round     | 是否圆角按钮   | boolean    | — | false   |
 | circle     | 是否圆形按钮   | boolean    | — | false   |
 | loading     | 是否加载中状态   | boolean    | — | false   |

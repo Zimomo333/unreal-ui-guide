@@ -117,10 +117,10 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 ## 属性
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| **percentage** | **百分比（必填）**   | number         |     0-100          |     0    |
+| percentage | 百分比   | number         |     0-100          |     0    |
 | type          | 进度条类型           | string         | line / circle | line |
 | stroke-width  | 进度条的宽度，单位 px | number          | — | 7 |
-| text-inside  | 进度条显示文字内置在进度条内（只在 type=line 时可用） | boolean | — | false |
+| text-inside  | 进度条显示文本内置在进度条内（只在 type=line 时可用） | boolean | — | false |
 | color  | 进度条背景色（会覆盖 status 状态颜色） | string/function/array | — | '' |
 | show-text  | 是否显示进度条文字内容 | boolean | — | true |
 | format  | 指定进度条文字内容 | function(percentage) | — | — |

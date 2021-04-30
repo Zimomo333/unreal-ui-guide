@@ -119,10 +119,10 @@
 | min      | 设置计数器允许的最小值 | number | — | -Infinity |
 | max      | 设置计数器允许的最大值 | number | — | Infinity |
 | step     | 计数器步长           | number   | — | 1 |
-| precision| 数值精度             | number   | — | — |
+| precision| 小数位数             | number   | — | — |
 | disabled | 是否禁用计数器        | boolean | — | false |
 | controls-position | 控制按钮位置 | string | right | - |
-| placeholder | 输入框默认 placeholder | string | - | - |
+| placeholder | 占位文本 | string | - | - |
 
 ## 事件
 | 事件名称 | 说明 | 回调参数 |

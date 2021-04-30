@@ -167,7 +167,6 @@
 | show-input | 是否显示输入框，仅在非范围选择时有效 | boolean | — | false |
 | show-stops | 是否显示间断点 | boolean | — | false |
 | show-tooltip | 是否显示 tooltip | boolean | — | true |
-| format-tooltip | 格式化 tooltip message | function(value) | — | — |
 | range | 是否为范围选择 | boolean | — | false |
 | vertical | 是否竖向模式 | boolean | — | false |
 | height | Slider 高度，竖向模式时必填 | string | — | — |

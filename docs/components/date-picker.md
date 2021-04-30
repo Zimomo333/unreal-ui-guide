@@ -65,7 +65,132 @@
 </script>
 ```
 
+##  日期和时间点
+
+通过设置`type`属性为`datetime`，即可在同一个选择器里同时进行日期和时间的选择。快捷选项的使用方法与 Date Picker 相同。
+
+```html
+<template>
+  <div class="block">
+    <span class="demonstration">默认</span>
+    <ur-date-picker
+      v-model="value1"
+      type="datetime"
+      placeholder="选择日期时间">
+    </ur-date-picker>
+  </div>
+  <div class="block">
+    <span class="demonstration">带快捷选项</span>
+    <ur-date-picker
+      v-model="value2"
+      type="datetime"
+      placeholder="选择日期时间"
+      align="right"
+      :shortcuts="shortcuts">
+    </ur-date-picker>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        shortcuts: [{
+          text: '今天',
+          value: new Date(),
+        }, {
+          text: '昨天',
+          value: (() => {
+            const date = new Date();
+            date.setTime(date.getTime() - 3600 * 1000 * 24);
+            return date
+          })(),
+        }, {
+          text: '一周前',
+          value: (() => {
+            const date = new Date();
+            date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+            return date
+          })(),
+        }],
+        value1: '',
+        value2: '',
+        defaultTime: new Date(2000, 1, 1, 12, 0, 0) // '12:00:00'
+      };
+    }
+  };
+</script>
+```
+
+## 日期和时间范围
+
+设置`type`为`datetimerange`即可选择日期和时间范围
+
+```html
+<template>
+  <div class="block">
+    <span class="demonstration">默认</span>
+    <ur-date-picker
+      v-model="value1"
+      type="datetimerange"
+      range-separator="至"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期">
+    </ur-date-picker>
+  </div>
+  <div class="block">
+    <span class="demonstration">带快捷选项</span>
+    <ur-date-picker
+      v-model="value2"
+      type="datetimerange"
+      :shortcuts="shortcuts"
+      range-separator="至"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期"
+      align="right">
+    </ur-date-picker>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        shortcuts: [{
+          text: '最近一周',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+            return [start, end]
+          })()
+        }, {
+          text: '最近一个月',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+            return [start, end]
+          })()
+        }, {
+          text: '最近三个月',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+            return [start, end]
+          })()
+        }],
+        value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
+        value2: ''
+      };
+    }
+  };
+</script>
+```
+
 ## 属性
+
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date(DatePicker) / array(DateRangePicker) | — | — |

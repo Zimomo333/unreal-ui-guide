@@ -245,7 +245,7 @@
 | clearable | 是否可以清空选项 | boolean | — | false |
 | collapse-tags | 多选时是否将选中值按文字的形式展示 | boolean | — | false |
 | multiple-limit | 多选时用户最多可以选择的项目数，为 0 则不限制 | number | — | 0 |
-| placeholder | 占位符 | string | — | 请选择 |
+| placeholder | 占位文本 | string | — | 请选择 |
 | no-data-text | 选项为空时显示的文字，也可以使用`#empty`设置 | string | — | 无数据 |
 
 ## Select 事件

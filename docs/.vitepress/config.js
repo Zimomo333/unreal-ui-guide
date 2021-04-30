@@ -28,7 +28,6 @@ module.exports = {
           { text: 'TimePicker 时间选择器', link: '/components/time-picker' },
           { text: 'TimeSelect 时间选择器', link: '/components/time-select' },
           { text: 'DatePicker 日期选择器', link: '/components/date-picker' },
-          { text: 'DateTimePicker 日期时间选择器', link: '/components/date-time-picker' },
           { text: 'Table 表格', link: '/components/table' },
           { text: 'Tag 标签', link: '/components/tag' },
           { text: 'Progress 进度条', link: '/components/progress' },
@@ -38,8 +37,8 @@ module.exports = {
           { text: 'Notification 通知', link: '/components/notification' },
           { text: 'Tabs 标签页', link: '/components/tabs' },
           { text: 'Breadcrumb 面包屑', link: '/components/breadcrumb' },
-          { text: 'Dialog 对话框', link: '/components/dialog' },
-          { text: 'Tooltip 文字提示', link: '/components/tooltip' },
+          { text: 'Dialog 模态框', link: '/components/dialog' },
+          { text: 'Tooltip 气泡提示', link: '/components/tooltip' },
           { text: 'Carousel 走马灯', link: '/components/carousel' },
         ]
       },

@@ -255,12 +255,7 @@ export default defineComponent ({
 | disabled      | 禁用            | boolean         | — | false   |
 | rows          | 输入框行数  |  number | — |  2   |
 | autosize      | 自适应内容高度  |  boolean / object | — |  false   |
-| autocomplete | 原生属性，自动补全 | string | on, off | off |
-| name | 原生属性 | string | — | — |
 | readonly | 原生属性，是否只读 | boolean | — | false |
-| max | 原生属性，设置最大值 | — | — | — |
-| min | 原生属性，设置最小值 | — | — | — |
-| step | 原生属性，设置输入字段的合法数字间隔 | — | — | — |
 | resize | 控制是否能被用户缩放 | string | none, both, horizontal, vertical | — |
 | autofocus | 原生属性，自动获取焦点 | boolean | true, false | false |
 
