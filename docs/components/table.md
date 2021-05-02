@@ -61,6 +61,7 @@
 使用带斑马纹的表格，可以更容易区分出不同行的数据。
 
 `stripe`属性可以创建带斑马纹的表格。它接受一个`Boolean`，默认为`false`，设置为`true`即为启用。
+
 ```html
 <template>
   <ur-table
@@ -333,9 +334,7 @@
 
 ## 多选
 
-选择多行数据时使用 Checkbox。
-
-实现多选非常简单: 手动添加一个`ur-table-column`，设`type`属性为`selection`即可；默认情况下若内容过多会折行显示，若需要单行显示可以使用`show-overflow-tooltip`属性，它接受一个`Boolean`，为`true`时多余的内容会在 hover 时以 tooltip 的形式显示出来。
+要选择多行数据，可设`type`属性为`selection`。
 ```html
 <template>
   <ur-table
@@ -428,7 +427,7 @@
 
 对表格进行排序，可快速查找或对比数据。
 
-在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。可以通过 Table 的`default-sort`属性设置默认的排序列和排序顺序。可以使用`sort-method`或者`sort-by`使用自定义的排序规则。如果需要后端排序，需将`sortable`设置为`custom`，同时在 Table 上监听`sort-change`事件，在事件回调中可以获取当前排序的字段名和排序顺序，从而向接口请求排序后的表格数据。在本例中，我们还使用了`formatter`属性，它用于格式化指定列的值，接受一个`Function`，会传入两个参数：`row`和`column`，可以根据自己的需求进行处理。
+在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。可以通过 Table 的`default-sort`属性设置默认的排序列和排序顺序。可以使用`sort-method`或者`sort-by`使用自定义的排序规则。
 ```html
 <template>
   <ur-table
@@ -488,109 +487,10 @@
 </script>
 ```
 
-## 筛选
+## 自定义列
 
-对表格进行筛选，可快速查找到自己想看的数据。
+使用插槽，可组合其他组件自定义列的显示内容。
 
-在列中设置`filters` `filter-method`属性即可开启该列的筛选，filters 是一个数组，`filter-method`是一个方法，它用于决定某些数据是否显示，会传入三个参数：`value`, `row` 和 `column`。
-```html
-<template>
-  <ur-button @click="resetDateFilter">清除日期过滤器</ur-button>
-  <ur-button @click="clearFilter">清除所有过滤器</ur-button>
-  <ur-table
-    row-key="date"
-    ref="filterTable"
-    :data="tableData"
-    style="width: 100%">
-    <ur-table-column
-      prop="date"
-      label="日期"
-      sortable
-      width="180"
-      column-key="date"
-      :filters="[{text: '2016-05-01', value: '2016-05-01'}, {text: '2016-05-02', value: '2016-05-02'}, {text: '2016-05-03', value: '2016-05-03'}, {text: '2016-05-04', value: '2016-05-04'}]"
-      :filter-method="filterHandler"
-    >
-    </ur-table-column>
-    <ur-table-column
-      prop="name"
-      label="姓名"
-      width="180">
-    </ur-table-column>
-    <ur-table-column
-      prop="address"
-      label="地址"
-      :formatter="formatter">
-    </ur-table-column>
-    <ur-table-column
-      prop="tag"
-      label="标签"
-      width="100"
-      :filters="[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]"
-      :filter-method="filterTag"
-      filter-placement="bottom-end">
-      <template #default="scope">
-        <ur-tag
-          :type="scope.row.tag === '家' ? 'primary' : 'success'"
-          disable-transitions>{{scope.row.tag}}</ur-tag>
-      </template>
-    </ur-table-column>
-  </ur-table>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        tableData: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-          tag: '家'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄',
-          tag: '公司'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄',
-          tag: '家'
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄',
-          tag: '公司'
-        }]
-      }
-    },
-    methods: {
-      resetDateFilter() {
-        this.$refs.filterTable.clearFilter('date');
-      },
-      clearFilter() {
-        this.$refs.filterTable.clearFilter();
-      },
-      formatter(row, column) {
-        return row.address;
-      },
-      filterTag(value, row) {
-        return row.tag === value;
-      },
-      filterHandler(value, row, column) {
-        const property = column['property'];
-        return row[property] === value;
-      }
-    }
-  }
-</script>
-```
-
-## 自定义列模板
-
-自定义列的显示内容，可组合其他组件使用。
-通过 `Scoped slot` 可以获取到 row, column, $index 和 store（table 内部的状态管理）的数据，用法参考 demo。
 ```html
 <template>
   <ur-table
@@ -672,8 +572,8 @@
 
 ## 展开行
 
-当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。
-通过设置 type="expand" 和 `Scoped slot` 可以开启展开行功能，`ur-table-column` 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 `Scoped slot` 相同。
+当行内容过多时，可以使用 Table 展开行功能。
+通过设置 type="expand" 和插槽可以开启展开行功能，`ur-table-column` 的插槽会被渲染成为展开行的内容。
 
 ```html
 <template>
@@ -784,12 +684,12 @@
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | data | 显示的数据 | array | — | — |
-| height | Table 的高度，默认为自动高度。如果 height 为 number 类型，单位 px；如果 height 为 string 类型，则这个高度会设置为 Table 的 style.height 的值，Table 的高度会受控于外部样式。  | string/number | — | — |
+| height | 表格的高度，默认为自动高度，可用于固定表头 | string/number | — | — |
 | stripe | 是否为斑马纹 table | boolean | — | false |
 | border | 是否带有纵向边框 | boolean | — | false |
-| row-key | 行数据的 Key，用来优化 Table 的渲染；在使用 reserve-selection 功能与显示树形数据时，该属性是必填的。类型为 String 时，支持多层访问：`user.info.id`，但不支持 `user.info[0].id`，此种情况请使用 `Function`。 | Function(row)/String | — | — |
-| empty-text | 空数据时显示的文本内容，也可以通过 `#empty` 设置 | String | — | 暂无数据 |
-| default-expand-all | 是否默认展开所有行，当 Table 包含展开行时有效 | Boolean | — | false |
+| row-key | 行数据的 Key | Function(row)/String | — | — |
+| empty-text | 空数据时显示的文本内容 | String | — | 暂无数据 |
+| default-expand-all | 是否默认展开所有行，当表格包含展开行时有效 | Boolean | — | false |
 | expand-row-keys | 可以通过该属性设置 Table 目前的展开行，需要设置 row-key 属性才能使用，该属性为展开行的 keys 数组。| Array | — | |
 | default-sort | 默认的排序列的 prop 和顺序。它的`prop`属性指定默认的排序的列，`order`指定默认排序的顺序| Object | `order`: ascending, descending | 如果只指定了`prop`, 没有指定`order`, 则默认顺序是ascending |
 
@@ -818,20 +718,19 @@
 ## Table-column 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| type | 对应列的类型。如果设置了 `selection` 则显示多选框；如果设置了 `index` 则显示该行的索引（从 1 开始计算）；如果设置了 `expand` 则显示为一个可展开的按钮 | string | selection/index/expand | — |
+| type | 对应列的类型。selection` 显示多选框； `index` 显示该行索引； `expand` 显示一个可展开的按钮 | string | selection /index / expand | — |
 | index | 如果设置了 `type=index`，可以通过传递 `index` 属性来自定义索引 | number, Function(index) | - | - |
-| label | 显示的标题 | string | — | — |
+| label | 对应列的表头名 | string | — | — |
 | prop | 对应列内容的字段名，也可以使用 property 属性 | string | — | — |
 | width | 对应列的宽度 | string | — | — |
 | fixed | 列是否固定在左侧或者右侧，true 表示固定在左侧 | string, boolean | true, left, right | — |
-| sortable | 对应列是否可以排序 | boolean, string | true, false | false |
+| sortable | 对应列可否排序 | boolean, string | true, false | false |
 | sort-method | 对数据进行排序的时候使用的方法，仅当 sortable 设置为 true 的时候有效，需返回一个数字，和 Array.sort 表现一致 | Function(a, b) | — | — |
 | sort-by | 指定数据按照哪个属性进行排序，仅当 sortable 设置为 true 且没有设置 sort-method 的时候有效。如果 sort-by 为数组，则先按照第 1 个属性排序，如果第 1 个相等，再按照第 2 个排序，以此类推 | String/Array/Function(row, index) | — | — |
-| sort-orders | 数据在排序时所使用排序策略的轮转顺序，仅当 sortable 为 true 时有效。需传入一个数组，随着用户点击表头，该列依次按照数组中元素的顺序进行排序 | array | 数组中的元素需为以下三者之一：`ascending` 表示升序，`descending` 表示降序，`null` 表示还原为原始顺序 | ['ascending', 'descending', null] |
+| sort-orders | 数据在排序时所使用排序策略的轮转顺序，仅当 sortable 为 true 时有效。需传入一个数组，随着用户点击表头，该列依次按照数组中元素的顺序进行排序 | array | `ascending` 表示升序，`descending` 表示降序，`null` 表示还原为原始顺序 | ['ascending', 'descending', null] |
 | resizable | 对应列是否可以通过拖动改变宽度（需要在 ur-table 上设置 border 属性为真） | boolean | — | true |
-| formatter | 用来格式化内容 | Function(row, column, cellValue, index) | — | — |
+| formatter | 格式化内容 | Function(row, column, cellValue, index) | — | — |
 | selectable | 仅对 type=selection 的列有效，类型为 Function，Function 的返回值用来决定这一行的 CheckBox 是否可以勾选 | Function(row, index) | — | — |
-| reserve-selection | 仅对 type=selection 的列有效，类型为 Boolean，为 true 则会在数据更新之后保留之前选中的数据（需指定 `row-key`） | Boolean | — | false |
 
 ## Table-column Scoped 插槽
 | name | 说明 |

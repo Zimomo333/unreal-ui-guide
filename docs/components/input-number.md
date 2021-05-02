@@ -27,7 +27,7 @@
 
 ## 禁用状态
 
-`disabled`属性接受一个`Boolean`，设置为`true`即可禁用整个组件，如果你只需要控制数值在某一范围内，可以设置`min`属性和`max`属性，不设置`min`和`max`时，最小值为 0。
+设置`disabled`属性即可禁用整个组件，如果只需要控制数值在某一范围内，可以设置`min`属性和`max`属性。
 
 ```html
 <template>
@@ -44,11 +44,9 @@
 </script>
 ```
 
-## 步数
+## 步长
 
-允许定义递增递减的步数控制
-
-设置`step`属性可以控制步长，接受一个`Number`。
+允许定义递增递减的步长控制，设置`step`属性可以控制步长。
 
 ```html
 <template>
@@ -67,7 +65,7 @@
 
 ## 精度
 
-设置 `precision` 属性可以控制数值精度，接收一个 `Number`。
+设置 `precision` 属性可以控制数值精度。
 
 ```html
 <template>
@@ -91,7 +89,7 @@
 
 ## 按钮位置
 
-设置 `controls-position` 属性可以控制按钮位置。
+设置 `controls-position` 属性可以控制加减按钮位置。
 ```html
 <template>
   <ur-input-number v-model="num" controls-position="right" @change="handleChange" :min="1" :max="10"></ur-input-number>
@@ -116,11 +114,11 @@
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |----------|-------------- |----------|--------------------------------  |-------- |
 | modelValue / v-model | 绑定值         | number / undefined | — | 0 |
-| min      | 设置计数器允许的最小值 | number | — | -Infinity |
-| max      | 设置计数器允许的最大值 | number | — | Infinity |
+| min      | 允许的最小值 | number | — | -Infinity |
+| max      | 允许的最大值 | number | — | Infinity |
 | step     | 计数器步长           | number   | — | 1 |
 | precision| 小数位数             | number   | — | — |
-| disabled | 是否禁用计数器        | boolean | — | false |
+| disabled | 禁用状态     | boolean | — | false |
 | controls-position | 控制按钮位置 | string | right | - |
 | placeholder | 占位文本 | string | - | - |
 

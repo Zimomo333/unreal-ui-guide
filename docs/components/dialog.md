@@ -138,13 +138,14 @@ export default {
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | model-value / v-model   | 是否显示 Dialog | boolean | — | — |
-| title     | Dialog 的标题，也可通过具名 slot （见下表）传入 | string    | — | — |
+| title     | Dialog 的标题 | string    | — | — |
 | fullscreen     | 是否为全屏 Dialog | boolean    | — | false |
 | modal     | 是否需要遮罩层   | boolean   | — | true |
+| append-to-body     | 嵌套 Dialog  | boolean   | — | false |
 | lock-scroll | 是否在 Dialog 出现时将 body 滚动锁定 | boolean | — | true |
-| close-on-click-modal | 是否可以通过点击 modal 关闭 Dialog | boolean    | — | true |
+| close-on-click-modal | 是否可以通过点击遮罩层关闭 Dialog | boolean    | — | true |
 | show-close | 是否显示关闭按钮 | boolean    | — | true |
-| before-close | 关闭前的回调，会暂停 Dialog 的关闭 | function(done)，done 用于关闭 Dialog | — | — |
+| before-close | 关闭前的回调函数 | function(done)，done 用于关闭 Dialog | — | — |
 | center | 是否对头部和底部采用居中布局 | boolean | — | false |
 
 ## 插槽

@@ -143,7 +143,7 @@ Notification 组件提供通知功能，UnrealUI 注册了`$notify`方法，接�
 
 ## 全局方法
 
-UnrealUI 为 ``app.config.globalProperties`` 添加了全局方法 `$notify`。因此在 vue instance 中可以采用本页面中的方式调用 Notification。
+UnrealUI 为 ``app.config.globalProperties`` 添加了全局方法 `$notify`。因此在 vue 实例中可以采用本页面中的方式调用 Notification。
 
 ## 单独引用
 
@@ -159,7 +159,7 @@ import { UrNotification } from 'unreal-ui-next';
 | title | 标题 | string | — | — |
 | message | 说明文本 | string | — | — |
 | duration | 显示时间, 毫秒。设为 0 则不会自动关闭 | number | — | 4500 |
-| position | 自定义弹出位置 | string | top-right/top-left/bottom-right/bottom-left | top-right |
+| position | 自定义弹出位置 | string | top-right / top-left / bottom-right / bottom-left | top-right |
 | showClose | 是否显示关闭按钮 | boolean | — | true |
 | onClose | 关闭时的回调函数 | function | — | — |
 | onClick | 点击 Notification 时的回调函数 | function | — | — |

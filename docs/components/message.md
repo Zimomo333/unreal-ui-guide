@@ -50,7 +50,7 @@ export default {
 
 ## 全局方法
 
-UnrealUI 为 `app.config.globalProperties` 添加了全局方法 $message。因此在 vue instance 中可以采用在 method 中调用 `this.$message` 方法唤起 `UrMessage`。
+UnrealUI 为 `app.config.globalProperties` 添加了全局方法 $message。因此在 vue 实例的 method 中可调用 `this.$message` 方法唤起 `UrMessage`。
 
 ## 单独引用
 
@@ -68,8 +68,8 @@ import { UrMessage } from 'unreal-ui-next';
 | duration | 显示时间, 毫秒。设为 0 则不会自动关闭 | number | — | 3000 |
 | showClose | 是否显示关闭按钮 | boolean | — | false |
 | center | 文本是否居中 | boolean | — | false |
-| onClose | 关闭时的回调函数, 参数为被关闭的 message 实例 | function | — | — |
-| offset | Message 距离窗口顶部的偏移量 | number | — | 20 |
+| onClose | 关闭时的回调函数 | function | — | — |
+| offset | 距离页面顶部的偏移量 | number | — | 20 |
 
 ## 方法
 调用 `UrMessage` 或 `this.$message` 会返回当前 Message 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。

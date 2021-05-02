@@ -47,7 +47,7 @@
 
 ## 有禁用选项
 
-在`ur-option`中，设定`disabled`值为 true，即可禁用该选项
+在`ur-option`中，设定`disabled`禁用该选项
 ```html
 <template>
   <ur-select v-model="value" placeholder="请选择">
@@ -91,8 +91,6 @@
 
 ## 禁用状态
 
-选择器不可用状态
-
 为`ur-select`设置`disabled`属性，则整个选择器不可用
 ```html
 <template>
@@ -135,9 +133,7 @@
 
 ## 可清空单选
 
-包含清空按钮，可将选择器清空为初始状态
-
-为`ur-select`设置`clearable`属性，则可将选择器清空。需要注意的是，`clearable`属性仅适用于单选。
+为`ur-select`设置`clearable`属性，包含清空按钮，可将选择器清空为初始状态。需要注意的是，`clearable`属性仅适用于单选。
 ```html
 <template>
   <ur-select v-model="value" clearable placeholder="请选择">
@@ -177,11 +173,10 @@
 </script>
 ```
 
-## 基础多选
+## 多选
 
-适用性较广的基础多选，用 Tag 展示已选项
+适用性较广的基础多选，用 Tag 标签组件展示已选项。为`ur-select`设置`multiple`属性即可启用多选，此时`v-model`的值为当前选中值所组成的数组。默认情况下选中值会以 Tag 的形式展现，可以设置`collapse-tags`属性将它们合并为数字统计。
 
-为`ur-select`设置`multiple`属性即可启用多选，此时`v-model`的值为当前选中值所组成的数组。默认情况下选中值会以 Tag 的形式展现，你也可以设置`collapse-tags`属性将它们合并为一段文字。
 ```html
 <template>
   <ur-select v-model="value1" multiple placeholder="请选择">
@@ -243,10 +238,10 @@
 | multiple | 是否多选 | boolean | — | false |
 | disabled | 是否禁用 | boolean | — | false |
 | clearable | 是否可以清空选项 | boolean | — | false |
-| collapse-tags | 多选时是否将选中值按文字的形式展示 | boolean | — | false |
-| multiple-limit | 多选时用户最多可以选择的项目数，为 0 则不限制 | number | — | 0 |
+| collapse-tags | 是否将选中值按数字的形式展示 | boolean | — | false |
+| multiple-limit | 最多可以选择的项目数，为 0 时不限制 | number | — | 0 |
 | placeholder | 占位文本 | string | — | 请选择 |
-| no-data-text | 选项为空时显示的文字，也可以使用`#empty`设置 | string | — | 无数据 |
+| no-data-text | 选项为空时显示的文字 | string | — | 无数据 |
 
 ## Select 事件
 | 事件名称 | 说明 | 回调参数 |
@@ -271,8 +266,8 @@
 ## Option 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| value | 选项的值 | string / number / boolean / object | — | — |
-| label | 选项的标签，若不设置则默认与 `value` 相同 | string/number | — | — |
+| value | 选项值 | string / number / boolean / object | — | — |
+| label | 选项标签，默认与 `value` 相同 | string / number | — | — |
 | disabled | 是否禁用该选项 | boolean | — | false |
 
 ## 方法

@@ -77,10 +77,10 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值，必须等于`active-value`或`inactive-value`，默认为`Boolean`类型 | boolean / string / number | — | — |
 | disabled  | 是否禁用    | boolean   | — | false   |
-| active-text  | switch 打开时的文字描述    | string   | — | — |
-| inactive-text  | switch 关闭时的文字描述    | string   | — | — |
-| active-value  | switch 打开时的值    | boolean / string / number | — | true |
-| inactive-value  | switch 关闭时的值    | boolean / string / number | — | false |
+| active-text  | 打开时的文字描述                                             | string   | — | — |
+| inactive-text  | 关闭时的文字描述    | string   | — | — |
+| active-value  | 打开时的值                                                   | boolean / string / number | — | true |
+| inactive-value  | 关闭时的值                                                   | boolean / string / number | — | false |
 
 ## 事件
 | 事件名称      | 说明    | 回调参数      |

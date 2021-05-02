@@ -153,9 +153,9 @@ export default {
 | trigger | 指示器的触发方式 | string | click | — |
 | autoplay | 是否自动切换 | boolean | — | true |
 | interval | 自动切换的时间间隔，单位为毫秒 | number | — | 3000 |
-| arrow | 切换按钮的显示时机 | string | always/hover/never | hover |
+| arrow | 切换按钮的显示时机 | string | always / hover / never | hover |
 | loop | 是否循环显示 | boolean | - | true |
-| direction | 走马灯展示的方向 | string | horizontal/vertical | horizontal |
+| direction | 走马灯展示的方向 | string | horizontal / vertical | horizontal |
 | pause-on-hover | 鼠标悬浮时暂停自动切换 | boolean | - | true |
 
 ## Carousel 事件
@@ -173,4 +173,4 @@ export default {
 ## Carousur-Item 属性
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| name | 幻灯片的名字，可用作 `setActiveItem` 的参数 | string | — | — |
+| name | 选定值，可用作 `setActiveItem` 的参数 | string | — | — |

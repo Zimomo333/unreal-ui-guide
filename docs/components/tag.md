@@ -4,7 +4,7 @@
 
 ## 基础用法
 
-由`type`属性来选择tag的类型，也可以通过`color`属性来自定义背景色。
+设置`type`属性来选择tag的主题样式。
 
 ```html
 <ur-tag>标签一</ur-tag>
@@ -15,7 +15,7 @@
 
 ## 可移除标签
 
-设置`closable`属性可以定义一个标签是否可移除。默认的标签移除时会附带渐变动画，如果不想使用，可以设置`disable-transitions`属性，它接受一个`Boolean`，true 为关闭。
+设置`closable`属性可以定义一个标签是否可移除。
 
 ```html
 <ur-tag
@@ -44,9 +44,7 @@
 
 ## 不同尺寸
 
-Tag 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的按钮尺寸。
-
-额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
+Tag 组件提供了三种尺寸，`medium`、`small`、`mini`，通过设置`size`属性来配置。
 
 ```html
 <ur-tag closable>默认标签</ur-tag>

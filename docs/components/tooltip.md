@@ -102,10 +102,10 @@
 ## 属性
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
-|  placement        |  Tooltip 的出现位置  | String           |  top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end |  bottom |
-|  disabled       |  Tooltip 是否可用  | Boolean           | — |  false |
+|  placement        | 气泡提示的出现位置                                    | String           |  top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end |  bottom |
+|  disabled       |  是否可用  | Boolean           | — |  false |
 |  offset        |  出现位置的偏移量  | Number           | — |  0 |
 | show-after | 延迟出现，单位毫秒 | Number | — | 0 |
 | hide-after | 延迟关闭，单位毫秒 | Number | — | 0 |
-| auto-close | Tooltip 出现后自动隐藏延时，单位毫秒，为 0 则不会自动隐藏 | number | — | 0 |
-| enterable | 鼠标是否可进入到 tooltip 中 | Boolean | — | true |
+| auto-close | 气泡出现后自动隐藏延时，单位毫秒，为 0 则不会自动隐藏 | number | — | 0 |
+| enterable | 鼠标是否可进入到气泡中 | Boolean | — | true |

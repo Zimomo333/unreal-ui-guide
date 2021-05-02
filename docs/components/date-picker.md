@@ -193,20 +193,20 @@
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| value / v-model | 绑定值 | date(DatePicker) / array(DateRangePicker) | — | — |
-| readonly | 完全只读 | boolean | — | false |
+| value / v-model | 绑定值 | date / array[date] | — | — |
+| readonly | 只读 | boolean | — | false |
 | disabled | 禁用 | boolean | — | false |
 | editable | 文本框可输入 | boolean | — | true |
 | clearable | 是否显示清除按钮 | boolean | — | true |
 | placeholder | 非范围选择时的占位内容 | string | — | — |
 | start-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | end-placeholder | 范围选择时结束日期的占位内容 | string | — | — |
-| type | 显示类型 | string | date / datetime / datetimerange | date |
-| format | 显示在输入框中的格式 | string | YYYY（年）MM（月）DD（日） | YYYY-MM-DD |
+| type | 日期时间显示类型 | string | date / datetime / datetimerange | date |
+| format | 显示在输入框中的格式 | string | YYYY（年）MM（月）DD（日）<br/>HH（时）mm（分）ss（秒） | YYYY-MM-DD<br/>HH:mm:ss |
 | range-separator | 选择范围时的分隔符 | string | — | '-' |
-| default-value | 可选，选择器打开时默认显示的时间 | Date | 可被`new Date()`解析 | — |
-| shortcuts | 设置快捷选项，需要传入数组对象 | object[{ text: string, value: Date }] | — | — |
-| disabledDate | 设置禁用状态，参数为当前日期，要求返回 Boolean | Function | — | — |
+| default-value | 选择器打开时默认显示的时间 | date |  | — |
+| shortcuts | 设置快捷选项，需要传入数组对象 | object[{ text: string, value: date }] | — | — |
+| disabledDate | 设置禁用日期，要求返回 Boolean | Function | — | — |
 
 ## 事件
 | 事件名称      | 说明    | 回调参数      |

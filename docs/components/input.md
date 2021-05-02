@@ -115,7 +115,7 @@ export default defineComponent ({
 </script>
 ```
 
-## 可自适应文本高度的文本域
+## 自适应文本高度
 
 通过设置 `autosize` 属性可以使得文本域的高度能够根据文本内容自动进行调整，并且 `autosize` 还可以设定为一个对象，指定最小行数和最大行数。
 
@@ -244,10 +244,10 @@ export default defineComponent ({
 
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| type         | 类型   | string  | text，textarea 和其他 [原生 input 的 type 值](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types) | text |
+| type         | 类型   | string  | text，textarea | text |
 | modelValue / v-model | 绑定值           | string / number  | — | — |
-| maxlength     | 原生属性，最大输入长度      | number          |  —  | — |
-| minlength     | 原生属性，最小输入长度      | number          | — | — |
+| maxlength     | 最大输入长度      | number          |  —  | — |
+| minlength     | 最小输入长度      | number          | — | — |
 | show-word-limit | 是否显示输入字数统计 | boolean    |  —  | false |
 | placeholder   | 输入框占位文本    | string          | — | — |
 | clearable     | 是否可清空        | boolean         | — | false |
@@ -255,9 +255,9 @@ export default defineComponent ({
 | disabled      | 禁用            | boolean         | — | false   |
 | rows          | 输入框行数  |  number | — |  2   |
 | autosize      | 自适应内容高度  |  boolean / object | — |  false   |
-| readonly | 原生属性，是否只读 | boolean | — | false |
-| resize | 控制是否能被用户缩放 | string | none, both, horizontal, vertical | — |
-| autofocus | 原生属性，自动获取焦点 | boolean | true, false | false |
+| readonly | 是否只读             | boolean | — | false |
+| resize | 控制是否能被缩放 | string | none, both, horizontal, vertical | — |
+| autofocus | 自动获取焦点 | boolean | true, false | false |
 
 ## Input 插槽
 | name | 说明 |

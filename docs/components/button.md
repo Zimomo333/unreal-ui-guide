@@ -3,7 +3,7 @@
 
 基础的按钮用法。
 
-使用`type`、`round`和`circle`属性来定义 Button 的样式。
+使用`type`、`round`和`circle`属性来定义按钮的样式。
 
 ```html
 <ur-button class="space">默认按钮</ur-button>
@@ -20,9 +20,7 @@
 ```
 ## 禁用状态
 
-按钮不可用状态。
-
-你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
+可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
 ```html
 <ur-button class="space" disabled>默认按钮</ur-button>
@@ -33,9 +31,7 @@
 ```
 ## 图标按钮
 
-带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
-
-设置`icon`属性即可，icon 的列表可以参考 UnrealUI 的 icon 组件，也可以设置在文字右边的 icon ，只要使用`i`标签即可，可以使用自定义图标。
+带图标的按钮可增强辨识度或节省空间，插槽内可以使用自定义图标。
 
 ```html
 <ur-button class="space" circle>
@@ -52,16 +48,14 @@
 
 ## 加载中
 
-点击按钮后进行数据加载操作，在按钮上显示加载状态。
-
-`loading`属性为`true`即可。
+点击按钮后进行数据加载操作，`loading`属性设置为`true`，按钮上显示加载状态。
 
 ```html
 <ur-button :loading="true">加载中</ur-button>
 ```
 ## 不同尺寸
 
-Button 组件提供除了默认值以外的四种尺寸，可以在不同场景下选择合适的按钮尺寸。`large`、`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
+按钮组件提供了四种尺寸，large、medium、small、mini，通过设置size属性来配置它们。
 
 ```html
 <ur-button class="button" size="large">超大尺寸</ur-button>

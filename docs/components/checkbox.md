@@ -3,7 +3,7 @@
 
 ## 基础用法
 
-`checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `ur-checkbox` 的 `label`属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
+`ur-checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `ur-checkbox` 的 `label`属性是该 checkbox 对应的值，`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
 
 ```html
 <template>
@@ -85,7 +85,7 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
-| label     | 选中状态的值（只有在`checkbox-group`或者绑定对象类型为`array`时有效）| string / number / boolean  |       —        |     —    |
+| label     | 选中状态的值 | string / number / boolean  |       —        |     —    |
 | disabled  | 是否禁用    | boolean   |  — | false   |
 | checked  | 当前是否勾选    | boolean   |  — | false   |
 
@@ -99,8 +99,8 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | array | — | — |
 | disabled  | 是否禁用    | boolean   | — | false   |
-| min     | 可被勾选的 checkbox 的最小数量   | number    |       —        |     —    |
-| max     | 可被勾选的 checkbox 的最大数量   | number    |       —        |     —    |
+| min     | 可被勾选的最小数量 | number    |       —        |     —    |
+| max     | 可被勾选的最大数量   | number    |       —        |     —    |
 
 ## Checkbox-group 事件
 | 事件名称      | 说明    | 回调参数      |

@@ -4,9 +4,8 @@
 
 ## 任意时间点
 
-可以选择任意时间
+可以选择任意时间，使用 ur-time-picker 标签，通过 `disabledHours` `disabledMinutes` 和 `disabledSeconds` 限制可选时间范围。
 
-使用 ur-time-picker 标签，通过 `disabledHours` `disabledMinutes` 和 `disabledSeconds` 限制可选时间范围。提供了两种交互方式：默认情况下通过鼠标滚轮进行选择，打开`arrow-control`属性则通过界面上的箭头进行选择。
 ```html
 <template>
   <ur-time-picker
@@ -57,9 +56,7 @@
 
 ## 任意时间范围
 
-可选择任意的时间范围
-
-添加`is-range`属性即可选择时间范围，同样支持`arrow-control`属性。
+添加`is-range`属性即可选择时间范围。
 ```html
 <template>
   <ur-time-picker
@@ -87,7 +84,7 @@
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date | — | — |
-| readonly | 完全只读 | boolean | — | false |
+| readonly | 只读 | boolean | — | false |
 | disabled | 禁用 | boolean | — | false |
 | editable | 文本框可输入 | boolean | — | true |
 | clearable | 是否显示清除按钮 | boolean | — | true |
@@ -96,7 +93,7 @@
 | end-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | is-range | 是否为时间范围选择 | boolean | — | false |
 | format | 显示在输入框中的格式 | string | HH（时）mm（分）ss（秒） | HH:mm:ss |
-| default-value | 可选，选择器打开时默认显示的时间 | date | — | — |
+| default-value | 选择器打开时默认显示的时间 | date | — | — |
 | disabledHours | 禁止选择部分小时选项 | function | — | - |
 | disabledMinutes | 禁止选择部分分钟选项 | function(selectedHour) | — | - |
 | disabledSeconds | 禁止选择部分秒选项 | function(selectedHour, selectedMinute) | — | - |

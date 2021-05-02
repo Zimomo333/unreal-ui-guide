@@ -4,7 +4,7 @@
 
 ## 基础用法
 
-设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。`prev`表示上一页，`next`为下一页，`pager`表示页码列表，除此以外还提供了`jumper`和`total`，`size`和特殊的布局符号`->`，`->`后的元素会靠右显示，`jumper`表示跳页元素，`total`表示总条目数，`size`用于设置每页显示的页码数量。
+设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。`prev`表示上一页，`next`为下一页，`pager`表示页码列表，`jumper`表示跳页元素，`total`表示总条目数，`size`用于设置每页显示的页码数量。
 ```html
 <template>
   <div class="block">
@@ -43,9 +43,9 @@
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 | page-size | 每页显示条目个数                         | number | — | 10 |
 | total | 总条目数 | number | — | — |
-| pager-count | 页码按钮的数量，当总页数超过该值时会折叠 | number | 大于等于 5 且小于等于 21 的奇数 | 7 |
+| pager-count | 页码按钮的数量，当总页数超过该值时会折叠 | number | — | 7 |
 | current-page | 当前页数 | number | — | 1 |
-| layout | 组件布局，子组件名用逗号分隔| String | `sizes`, `prev`, `pager`, `next`, `jumper`, `->`, `total`, `slot` | 'prev, pager, next, jumper, ->, total'  |
+| layout | 组件布局，子组件名用逗号分隔| String | `sizes`, `prev`, `pager`, `next`, `jumper`, `total` | 'prev, pager, next, jumper, total'  |
 | page-sizes | 每页显示个数选择器的选项设置 | number[] | — |  [10, 20, 30, 40, 50, 100] |
 | prev-text | 替代图标显示的上一页文字 | string | — | — |
 | next-text | 替代图标显示的下一页文字 | string | — | — |

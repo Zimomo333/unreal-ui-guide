@@ -69,7 +69,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 ## Tabs 属性
 | 参数       | 说明     | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| value / v-model  | 绑定值，选中选项卡的 name  | string   |  —  |  第一个选项卡的 name |
+| value / v-model  | 绑定值，选中选项卡的 name  | string   |  —  | 首个选项卡的 name |
 | tab-position  | 选项卡所在位置 | string   |  top/right/bottom/left  |  top |
 | before-leave | 切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。 | Function(activeName, oldActiveName) | — | — |
 
@@ -83,7 +83,7 @@ Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可
 |---------- |-------- |---------- |-------------  |-------- |
 | label     | 选项卡标题   | string   | — |    —     |
 | disabled | 是否禁用 | boolean | — | false |
-| name      | 与选项卡绑定值 value 对应的标识符，表示选项卡别名 | string | — | 该选项卡在选项卡列表中的顺序值，如第一个选项卡则为'1' |
+| name      | 与选项卡绑定值 value 对应的标识符，表示选项卡别名 | string | — | 该选项卡在选项卡列表中的顺序值 |
 | lazy  | 标签是否延迟渲染   | boolean   | — |  false  |
 
 ## Tab-pane 插槽
