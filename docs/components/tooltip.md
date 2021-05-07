@@ -1,4 +1,4 @@
-# Tooltip 气泡提示
+# 气泡提示 Tooltip
 
 常用于展示鼠标 hover 时的提示信息。
 

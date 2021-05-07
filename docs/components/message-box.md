@@ -1,4 +1,4 @@
-# MessageBox 弹框
+# 弹框 MessageBox
 模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、确认消息和提交内容。
 
 :::tip
@@ -134,7 +134,6 @@ import { UrMessageBox } from 'unreal-ui-next';
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title | 标题 | string | — | — |
 | message | 消息正文内容                                                 | string | — | — |
-| type | 主题 | string | success / info / error | — |
 | showClose | 是否显示右上角关闭按钮 | boolean | — | true |
 | beforeClose | 关闭前的回调函数 | function(action, instance, done)，action 的值为`confirm`, `cancel`或`close`；instance 为弹框实例；done 用于关闭弹框实例 | — | — |
 | lockScroll | 是否在弹框出现时将 body 滚动锁定 | boolean | — | true |

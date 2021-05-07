@@ -1,4 +1,4 @@
-# Pagination 分页
+# 分页 Pagination
 
 当数据量过多时，使用分页分解数据。
 

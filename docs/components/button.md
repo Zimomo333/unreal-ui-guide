@@ -1,23 +1,17 @@
-# Button 按钮
+# 按钮 Button
 ## 基础用法
 
 基础的按钮用法。
 
 使用`type`、`round`和`circle`属性来定义按钮的样式。
 
-```html
-<ur-button class="space">默认按钮</ur-button>
-<ur-button class="space" type="primary">主要按钮</ur-button>
-<ur-button class="space" type="success">成功按钮</ur-button>
-<ur-button class="space" type="info">信息按钮</ur-button>
-<ur-button class="space" type="danger">危险按钮</ur-button>
+<iframe src="https://codesandbox.io/embed/unreal-ui-next-0x50d?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="unreal-ui-next"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 
-<ur-button class="space" round>圆角按钮</ur-button>
-<ur-button class="space" type="primary" round>主要按钮</ur-button>
-<ur-button class="space" type="success" round>成功按钮</ur-button>
-<ur-button class="space" type="info" round>信息按钮</ur-button>
-<ur-button class="space" type="danger" round>危险按钮</ur-button>
-```
 ## 禁用状态
 
 可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。

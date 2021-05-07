@@ -1,4 +1,4 @@
-# Notification 通知
+# 通知 Notification
 
 悬浮出现在页面角落，显示全局的通知提醒消息。
 
