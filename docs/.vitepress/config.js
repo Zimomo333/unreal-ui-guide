@@ -35,8 +35,10 @@ module.exports = {
           { text: '消息提示 Message', link: '/components/message' },
           { text: '弹框 MessageBox', link: '/components/message-box' },
           { text: '通知 Notification', link: '/components/notification' },
+          { text: '导航栏 Menu', link: '/components/menu' },
           { text: '标签页 Tabs', link: '/components/tabs' },
           { text: '面包屑 Breadcrumb', link: '/components/breadcrumb' },
+          { text: '下拉菜单 Dropdown', link: '/components/dropdown' },
           { text: '模态框 Dialog', link: '/components/dialog' },
           { text: '气泡提示 Tooltip', link: '/components/tooltip' },
           { text: '走马灯 Carousel', link: '/components/carousel' },
@@ -45,7 +47,7 @@ module.exports = {
       {
         text: '数据可视化',
         children: [
-          { text: '柱状图', link: '/chart/bar-chart' },
+          { text: '柱状图 BarChart', link: '/chart/bar-chart' },
         ]
       }
     ],
