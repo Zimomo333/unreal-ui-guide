@@ -3,6 +3,13 @@
 
 用于选择或输入日期
 
+<iframe src="https://codesandbox.io/embed/date-time-picker-87fw5?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fdate-time-picker.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="date-time-picker"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ##  选择日
 
 以「日」为基本单位，基础的日期选择控件

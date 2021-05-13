@@ -2,6 +2,13 @@
 
 表示两种相互对立的状态间的切换，多用于触发「开/关」。
 
+<iframe src="https://codesandbox.io/embed/switch-1w3y9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fswitch.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="switch"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基本用法
 
 绑定`v-model`到一个`Boolean`类型的变量。可以使用`active-color`属性与`inactive-color`属性来设置开关的背景色。

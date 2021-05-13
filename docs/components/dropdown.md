@@ -2,6 +2,13 @@
 
 将动作或菜单折叠到下拉菜单中。
 
+<iframe src="https://codesandbox.io/embed/dropdown-s5jz4?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fdropdown.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="dropdown"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基础用法
 
 移动到下拉菜单上，展开更多操作。

@@ -1,8 +1,8 @@
 # 按钮 Button
 
-<iframe src="https://codesandbox.io/embed/ur-button-jlx6e?fontsize=14&hidenavigation=1&theme=dark"
+<iframe src="https://codesandbox.io/embed/button-3pllo?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fbutton.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="ur-button"
+     title="button"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>

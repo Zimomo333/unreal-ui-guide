@@ -2,6 +2,13 @@
 
 当数据量过多时，使用分页分解数据。
 
+<iframe src="https://codesandbox.io/embed/pagination-rtyx0?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fpagination.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="pagination"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基础用法
 
 设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。`prev`表示上一页，`next`为下一页，`pager`表示页码列表，`jumper`表示跳页元素，`total`表示总条目数，`size`用于设置每页显示的页码数量。

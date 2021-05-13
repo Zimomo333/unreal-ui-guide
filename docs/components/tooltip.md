@@ -2,6 +2,13 @@
 
 常用于展示鼠标 hover 时的提示信息。
 
+<iframe src="https://codesandbox.io/embed/tooltip-nb5hx?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftooltip.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="tooltip"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基础用法
 
 在这里我们提供 9 种不同方向的展示方式，可以通过以下完整示例来理解，选择你要的效果。

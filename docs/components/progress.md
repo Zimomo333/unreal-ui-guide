@@ -2,6 +2,13 @@
 
 用于展示操作进度，告知用户当前状态和预期。
 
+<iframe src="https://codesandbox.io/embed/progress-fe846?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fprogress.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="progress"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 线形进度条
 
 设置`percentage`属性表示进度条对应的百分比，可通过 `format` 属性来指定进度条文字内容。

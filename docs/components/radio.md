@@ -2,6 +2,13 @@
 
 适用于在多个互斥的选项中选择的场景
 
+<iframe src="https://codesandbox.io/embed/radio-gz29w?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="radio"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基础用法
 
 结合`ur-radio-group`元素和子元素`ur-radio`可以实现单选组，在`ur-radio-group`中绑定`v-model`，在`ur-radio`中设置好`label`即可，无需再给每一个`ur-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。

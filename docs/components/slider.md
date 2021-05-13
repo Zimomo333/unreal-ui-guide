@@ -2,6 +2,13 @@
 
 通过拖动滑块在一个固定区间内进行选择
 
+<iframe src="https://codesandbox.io/embed/slider-ik5ub?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fslider.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="slider"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 基础用法
 
 在拖动滑块时，显示当前值

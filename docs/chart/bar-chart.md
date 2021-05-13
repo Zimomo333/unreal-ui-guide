@@ -2,6 +2,13 @@
 
 通过`xAxis`属性可配置x轴坐标系，y轴坐标系会根据数据`data`自动计算并绘图。
 
+<iframe src="https://codesandbox.io/embed/bar-chart-ooprs?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fbar-chart.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="bar-chart"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ```vue
 <template>
   <div>

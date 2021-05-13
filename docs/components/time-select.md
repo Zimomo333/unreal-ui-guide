@@ -2,6 +2,13 @@
 
  用于选择或输入日期
 
+<iframe src="https://codesandbox.io/embed/time-select-yglcf?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftime-select.vue&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="time-select"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## 固定时间点
 
 提供几个固定的时间点供用户选择
