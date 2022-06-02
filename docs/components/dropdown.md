@@ -1,6 +1,11 @@
+<script setup>
+  import DropDownDemo from '../../src/components/dropdown.vue';
+</script>
 # 下拉菜单 Dropdown
 
 将动作或菜单折叠到下拉菜单中。
+
+<DropDownDemo />
 
 <iframe src="https://codesandbox.io/embed/dropdown-s5jz4?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fdropdown.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

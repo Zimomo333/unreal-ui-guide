@@ -1,7 +1,11 @@
-
+<script setup>
+  import DateTimePickerDemo from '../../src/components/date-time-picker.vue';
+</script>
 # 日期选择器 DatePicker
 
 用于选择或输入日期
+
+<DateTimePickerDemo />
 
 <iframe src="https://codesandbox.io/embed/date-time-picker-87fw5?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fdate-time-picker.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

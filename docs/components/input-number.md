@@ -1,6 +1,11 @@
+<script setup>
+  import InputNumberDemo from '../../src/components/input-number.vue';
+</script>
 # InputNumber 计数器
 
 仅允许输入标准的数字值，可定义范围
+
+<InputNumberDemo />
 
 <iframe src="https://codesandbox.io/embed/input-number-2s3uv?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Finput-number.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

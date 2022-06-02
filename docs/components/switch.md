@@ -1,6 +1,11 @@
+<script setup>
+  import SwitchDemo from '../../src/components/switch.vue';
+</script>
 # 开关 Switch
 
 表示两种相互对立的状态间的切换，多用于触发「开/关」。
+
+<SwitchDemo />
 
 <iframe src="https://codesandbox.io/embed/switch-1w3y9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fswitch.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

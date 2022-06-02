@@ -1,5 +1,10 @@
+<script setup>
+  import MessageBoxDemo from '../../src/components/message-box.vue';
+</script>
 # 弹框 MessageBox
 模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、确认消息和提交内容。
+
+<MessageBoxDemo />
 
 <iframe src="https://codesandbox.io/embed/message-box-idkdt?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fmessage-box.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

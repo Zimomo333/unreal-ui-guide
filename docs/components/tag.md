@@ -1,6 +1,11 @@
+<script setup>
+  import TagDemo from '../../src/components/tag.vue';
+</script>
 # 标签 Tag
 
 用于标记和选择。
+
+<TagDemo />
 
 <iframe src="https://codesandbox.io/embed/tag-itilz?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftag.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

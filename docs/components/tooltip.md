@@ -1,6 +1,11 @@
+<script setup>
+  import TooltipDemo from '../../src/components/tooltip.vue';
+</script>
 # 气泡提示 Tooltip
 
 常用于展示鼠标 hover 时的提示信息。
+
+<TooltipDemo />
 
 <iframe src="https://codesandbox.io/embed/tooltip-nb5hx?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftooltip.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

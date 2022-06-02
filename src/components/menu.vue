@@ -1,24 +1,4 @@
-<script setup>
-  import MenuDemo from '../../src/components/menu.vue';
-</script>
-# 导航栏 Menu
 
-垂直菜单，可内嵌子菜单。
-
-<MenuDemo />
-
-<iframe src="https://codesandbox.io/embed/menu-mqvvn?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fmenu.vue&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="menu"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
-
-## 基础用法
-
-通过`ur-menu-item-group`组件可以实现菜单进行分组。
-
-```html
 <template>
   <div class="menu_demo">
     <ur-menu default-active="2" @open="handleOpen" @close="handleClose">
@@ -124,9 +104,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .menu_demo {
-  width: 15%;
+  width: 16rem;
   margin: 0 auto;
 }
 .menu_demo .icon {
@@ -134,32 +114,3 @@ export default {
   top: -0.1rem;
 }
 </style>
-```
-## Menu 属性
-| 参数              | 说明                                                         | 类型    | 可选值 | 默认值  |
-| ----------------- | ------------------------------------------------------------ | ------- | ------ | ------- |
-| background-color  | 菜单的背景色                                                 | string  | —      | #ffffff |
-| text-color        | 菜单的文字颜色                                               | string  | —      | #303133 |
-| active-text-color | 当前激活菜单的文字颜色                                       | string  | —      | #409EFF |
-| default-active    | 当前激活菜单的 index                                         | string  | —      | —       |
-| unique-opened     | 是否只保持一个子菜单的展开                                   | boolean | —      | false   |
-| router            | 是否使用 vue-router 的模式，启用该模式会在激活导航时以 index 作为 path 进行路由跳转 | boolean | —      | false   |
-
-## Menu 方法
-| 方法名称 | 说明                | 参数                                |
-| -------- | ------------------- | ----------------------------------- |
-| open     | 展开指定的 sub-menu | index: 需要打开的 sub-menu 的 index |
-| close    | 收起指定的 sub-menu | index: 需要收起的 sub-menu 的 index |
-
-## SubMenu 属性
-| 参数     | 说明     | 类型        | 可选值 | 默认值 |
-| -------- | -------- | ----------- | ------ | ------ |
-| index    | 唯一标志 | string/null | —      | null   |
-| disabled | 是否禁用 | boolean     | —      | false  |
-
-## Menu-Item 属性
-| 参数     | 说明                | 类型    | 可选值 | 默认值 |
-| -------- | ------------------- | ------- | ------ | ------ |
-| index    | 唯一标志            | string  | —      | —      |
-| route    | Vue Router 路径对象 | Object  | —      | —      |
-| disabled | 是否禁用            | boolean | —      | false  |

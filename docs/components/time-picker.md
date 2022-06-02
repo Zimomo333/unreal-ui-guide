@@ -1,6 +1,11 @@
+<script setup>
+  import TimePickerDemo from '../../src/components/time-picker.vue';
+</script>
 # 时间选择器 TimePicker
 
- 用于选择或输入日期
+用于选择或输入日期
+
+<TimePickerDemo />
 
 <iframe src="https://codesandbox.io/embed/time-picker-4x261?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftime-picker.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

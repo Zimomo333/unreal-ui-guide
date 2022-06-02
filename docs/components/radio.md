@@ -1,6 +1,11 @@
+<script setup>
+  import RadioDemo from '../../src/components/radio.vue';
+</script>
 # 单选框 Radio
 
 适用于在多个互斥的选项中选择的场景
+
+<RadioDemo />
 
 <iframe src="https://codesandbox.io/embed/radio-gz29w?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

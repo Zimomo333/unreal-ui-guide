@@ -1,6 +1,11 @@
+<script setup>
+  import ProgressDemo from '../../src/components/progress.vue';
+</script>
 # 进度条 Progress
 
 用于展示操作进度，告知用户当前状态和预期。
+
+<ProgressDemo />
 
 <iframe src="https://codesandbox.io/embed/progress-fe846?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fprogress.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

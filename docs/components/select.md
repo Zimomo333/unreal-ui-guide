@@ -1,6 +1,11 @@
+<script setup>
+  import SelectDemo from '../../src/components/select.vue';
+</script>
 # 选择器 Select
 
 当选项过多时，使用下拉菜单展示并选择内容。
+
+<SelectDemo />
 
 <iframe src="https://codesandbox.io/embed/select-fjtu0?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fselect.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

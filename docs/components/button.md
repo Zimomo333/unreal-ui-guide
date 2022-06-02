@@ -1,4 +1,9 @@
+<script setup>
+  import ButtonDemo from '../../src/components/button.vue';
+</script>
 # 按钮 Button
+
+<ButtonDemo />
 
 <iframe src="https://codesandbox.io/embed/button-3pllo?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fbutton.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

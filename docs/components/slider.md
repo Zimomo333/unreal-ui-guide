@@ -1,6 +1,11 @@
+<script setup>
+  import SliderDemo from '../../src/components/slider.vue';
+</script>
 # 滑块 Slider
 
 通过拖动滑块在一个固定区间内进行选择
+
+<SliderDemo />
 
 <iframe src="https://codesandbox.io/embed/slider-ik5ub?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fslider.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

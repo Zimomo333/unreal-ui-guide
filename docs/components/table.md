@@ -1,6 +1,11 @@
+<script setup>
+  import TableDemo from '../../src/components/table.vue';
+</script>
 # 表格 Table
 
 用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作。
+
+<TableDemo />
 
 <iframe src="https://codesandbox.io/embed/table-kr1zc?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Ftable.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
