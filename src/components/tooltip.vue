@@ -51,7 +51,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .box {
   width: 350px;
   margin: 3rem auto;

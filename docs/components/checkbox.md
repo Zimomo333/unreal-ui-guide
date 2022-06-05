@@ -5,6 +5,7 @@
 适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
 
 <CheckboxDemo />
+<br />
 
 <iframe src="https://codesandbox.io/embed/gifted-moser-n7fb0?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

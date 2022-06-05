@@ -6,6 +6,8 @@
 通过鼠标或键盘输入字符
 
 <InputDemo />
+<br />
+<br />
 
 <iframe src="https://codesandbox.io/embed/input-0jycg?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Finput.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

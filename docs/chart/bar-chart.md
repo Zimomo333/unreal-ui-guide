@@ -5,7 +5,10 @@
 
 通过`xAxis`属性可配置x轴坐标系，y轴坐标系会根据数据`data`自动计算并绘图。
 
+<br />
 <BarChartDemo />
+<br />
+<br />
 
 <iframe src="https://codesandbox.io/embed/bar-chart-ooprs?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fbar-chart.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

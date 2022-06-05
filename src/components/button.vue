@@ -28,7 +28,7 @@
   <ur-button class="space" type="info" disabled>信息按钮</ur-button>
   <ur-button class="space" type="danger" disabled>危险按钮</ur-button>
   <br><br>
-  <ur-button :loading="true">加载中</ur-button>
+  <ur-button :loading="true" style="margin: 0 .5rem;">加载中</ur-button>
   <br><br>
   <ur-button class="space" size="large">超大尺寸</ur-button>
   <ur-button class="space" size="medium">中等按钮</ur-button>

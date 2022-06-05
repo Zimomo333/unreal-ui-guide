@@ -69,9 +69,12 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .dropdown_demo .space {
   margin: 1rem;
+}
+.dropdown_demo {
+  margin-bottom: 16rem;
 }
 .dropdown_demo svg {
   vertical-align: middle;

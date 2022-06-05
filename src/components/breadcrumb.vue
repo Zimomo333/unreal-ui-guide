@@ -16,7 +16,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .breadcrumb_wrap {
   margin: 0 auto;
   width: 35rem;

@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 .time-picker-space {
   margin: 0 0.6rem;
 }

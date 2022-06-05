@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: 2rem 2rem 0;">
     <ur-bar-chart :data="data" :xAxis="xAxis"/>
   </div>
 </template>

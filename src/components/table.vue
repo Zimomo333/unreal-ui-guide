@@ -1,4 +1,5 @@
 <template>
+  <div class="table-demo">
   <div class="table">
     <ur-table class="table" :data="tableData" style="width: 100%">
       <ur-table-column prop="date" label="日期" width="140"></ur-table-column>
@@ -104,6 +105,7 @@
       <ur-table-column prop="address" label="地址" :formatter="formatter"></ur-table-column>
     </ur-table>
   </div>
+  </div>
 </template>
 
 <script>
@@ -145,7 +147,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 .table {
   width: 35rem;
   margin: 0 auto;
@@ -157,5 +159,23 @@ export default {
 }
 .table_button {
   margin: 0 .6rem 0 .2rem;
+}
+/* 修复vitepress默认样式影响 */
+.table-demo table {
+  display: table;
+  margin: initial;
+  border-radius: initial;
+  box-shadow: initial;
+  border-collapse: initial;
+  overflow-x: initial;
+
+  border-collapse: separate;
+  text-indent: initial;
+}
+.table-demo th, .table-demo td {
+  border: initial;
+}
+.table-demo tr:nth-child(2n) {
+  background-color: initial;
 }
 </style>

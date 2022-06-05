@@ -86,7 +86,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 .select-space {
   margin: 0 1rem 14rem;
 }

@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 .time-select-wrap {
   margin-bottom: 20rem;
 }

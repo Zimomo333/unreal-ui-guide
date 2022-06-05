@@ -176,7 +176,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .form_demo {
   display: flex;
   justify-content: center;
@@ -189,6 +189,7 @@ export default {
   border: 0.0625rem solid #d1d9e6;
   border-radius: 0.55rem;
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  box-sizing: initial;
 }
 .form_demo .login-container .title {
   margin: 0 0 1.5rem;

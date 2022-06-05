@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .input-number-space {
   margin: 1rem 1.4rem;
 }

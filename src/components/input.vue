@@ -71,7 +71,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .input-demo {
   margin: 0 0.6rem 0.8rem;
   width: 14rem;

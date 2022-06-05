@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .carousel-demo {
   width: 35rem;
   height: 24rem;

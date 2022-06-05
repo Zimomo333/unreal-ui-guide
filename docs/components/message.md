@@ -6,6 +6,8 @@
 常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。
 
 <MessageDemo />
+<br />
+<br />
 
 <iframe src="https://codesandbox.io/embed/message-uk8nt?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fmessage.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

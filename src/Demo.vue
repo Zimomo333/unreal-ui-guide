@@ -86,7 +86,7 @@
       <p class="title">气泡</p>
       <tooltip-demo />
     </div>
-    <div style="margin-bottom: 16rem">
+    <div>
       <p class="title">下拉菜单</p>
       <drop-down-demo />
     </div>
@@ -110,37 +110,37 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import ButtonDemo from "./components/button.vue";
-import RadioDemo from "./components/radio.vue";
-import CheckboxDemo from "./components/checkbox.vue";
-import InputDemo from "./components/input.vue";
-import InputNumberDemo from "./components/input-number.vue";
-import SelectDemo from "./components/select.vue";
-import SwitchDemo from "./components/switch.vue";
-import SliderDemo from "./components/slider.vue";
-import TimePickerDemo from "./components/time-picker.vue";
-import TimeSelectDemo from "./components/time-select.vue";
-import DateTimePickerDemo from "./components/date-time-picker.vue";
-import TableDemo from "./components/table.vue";
-import TagDemo from "./components/tag.vue";
-import ProgressDemo from "./components/progress.vue";
-import PaginationDemo from "./components/pagination.vue";
-import MessageDemo from "./components/message.vue";
-import MessageBoxDemo from "./components/message-box.vue";
-import NotificationDemo from "./components/notification.vue";
-import TabsDemo from "./components/tabs.vue";
-import BreadcrumbDemo from "./components/breadcrumb.vue";
-import DialogDemo from "./components/dialog.vue";
-import TooltipDemo from "./components/tooltip.vue";
-import CarouselDemo from "./components/carousel.vue";
-import BarChartDemo from "./components/bar-chart.vue";
-import DropDownDemo from "./components/dropdown.vue";
-import MenuDemo from "./components/menu.vue";
-import FormDemo from "./components/form.vue";
+import { defineComponent } from 'vue';
+import ButtonDemo from './components/button.vue';
+import RadioDemo from './components/radio.vue';
+import CheckboxDemo from './components/checkbox.vue';
+import InputDemo from './components/input.vue';
+import InputNumberDemo from './components/input-number.vue';
+import SelectDemo from './components/select.vue';
+import SwitchDemo from './components/switch.vue';
+import SliderDemo from './components/slider.vue';
+import TimePickerDemo from './components/time-picker.vue';
+import TimeSelectDemo from './components/time-select.vue';
+import DateTimePickerDemo from './components/date-time-picker.vue';
+import TableDemo from './components/table.vue';
+import TagDemo from './components/tag.vue';
+import ProgressDemo from './components/progress.vue';
+import PaginationDemo from './components/pagination.vue';
+import MessageDemo from './components/message.vue';
+import MessageBoxDemo from './components/message-box.vue';
+import NotificationDemo from './components/notification.vue';
+import TabsDemo from './components/tabs.vue';
+import BreadcrumbDemo from './components/breadcrumb.vue';
+import DialogDemo from './components/dialog.vue';
+import TooltipDemo from './components/tooltip.vue';
+import CarouselDemo from './components/carousel.vue';
+import BarChartDemo from './components/bar-chart.vue';
+import DropDownDemo from './components/dropdown.vue';
+import MenuDemo from './components/menu.vue';
+import FormDemo from './components/form.vue';
 
 export default defineComponent({
-  name: "Demo",
+  name: 'Demo',
   components: {
     ButtonDemo,
     RadioDemo,
@@ -184,11 +184,27 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-.title {
-  font-size: 1.5rem;
-  margin: 0.8rem 0;
+.ur-date-editor .ur-range-separator {
+  width: 8%;
 }
-.space {
-  margin: 0 0.5rem;
+/* 修复vitepress默认样式影响 */
+#demo table {
+  display: table;
+  margin: initial;
+  border-radius: initial;
+  box-shadow: initial;
+  border-collapse: initial;
+  overflow-x: initial;
+
+  border-collapse: separate;
+  text-indent: initial;
 }
+.ur-popper th, .ur-popper td {
+  border: initial;
+}
+.ur-popper tr:nth-child(2n) {
+  background-color: initial;
+}
+/* 修复vitepress默认样式影响 end */
+
 </style>

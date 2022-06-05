@@ -5,6 +5,8 @@
 在保留当前页面状态的情况下，告知用户并承载相关操作。
 
 <DialogDemo />
+<br />
+<br />
 
 <iframe src="https://codesandbox.io/embed/dialog-1wyl9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2Fdialog.vue&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
