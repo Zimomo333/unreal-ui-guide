@@ -7,6 +7,11 @@ export default defineConfig({
             vue: "vue/dist/vue.esm-bundler.js",
         },
     },
+    ssr: { 
+        // 解决：SyntaxError: Cannot use import statement outside a module
+        // https://github.com/vuejs/vitepress/issues/476
+        noExternal: ['unreal-ui-next'] 
+    },
     // plugins: [
     //     // 按需导入组件样式
     //     // styleImport({
