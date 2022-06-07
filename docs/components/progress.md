@@ -96,10 +96,8 @@ Progress 组件可通过 `stroke-width` 属性更改进度条的高度，并可�
 
 <template>
   <ur-progress class="progress" type="circle" :percentage="percentage"></ur-progress>
-  <ur-button-group>
-    <ur-button @click="decrease">减</ur-button>
-    <ur-button @click="increase">加</ur-button>
-  </ur-button-group>
+  <ur-button @click="decrease">减</ur-button>
+  <ur-button @click="increase">加</ur-button>
 </template>
 
 <script>
