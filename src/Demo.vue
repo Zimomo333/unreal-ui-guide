@@ -1,112 +1,114 @@
 <template>
-  <div id="demo">
-    <div>
-      <p class="title">按钮</p>
-      <button-demo />
+  <ClientOnly>
+    <div id="demo">
+      <div>
+        <p class="title">按钮</p>
+        <button-demo />
+      </div>
+      <div>
+        <p class="title">单选框</p>
+        <radio-demo />
+        <p class="title">多选框</p>
+        <checkbox-demo />
+      </div>
+      <div>
+        <p class="title">输入框</p>
+        <input-demo />
+      </div>
+      <div>
+        <p class="title">计数器</p>
+        <input-number-demo />
+      </div>
+      <div>
+        <p class="title">选择器</p>
+        <select-demo />
+      </div>
+      <div>
+        <p class="title">开关</p>
+        <switch-demo />
+      </div>
+      <div>
+        <p class="title">滑块</p>
+        <slider-demo />
+      </div>
+      <div>
+        <p class="title">时间选择器</p>
+        <time-picker-demo />
+      </div>
+      <div>
+        <p class="title">时间选择器</p>
+        <time-select-demo />
+      </div>
+      <div>
+        <p class="title">日期时间选择器</p>
+        <date-time-picker-demo />
+      </div>
+      <div>
+        <p class="title">表格</p>
+        <table-demo />
+      </div>
+      <div>
+        <p class="title">标签</p>
+        <tag-demo />
+      </div>
+      <div>
+        <p class="title">进度条</p>
+        <progress-demo />
+      </div>
+      <div>
+        <p class="title">分页</p>
+        <pagination-demo />
+      </div>
+      <div>
+        <p class="title">消息提示</p>
+        <message-demo />
+      </div>
+      <div>
+        <p class="title">弹框</p>
+        <message-box-demo />
+      </div>
+      <div>
+        <p class="title">通知</p>
+        <notification-demo />
+      </div>
+      <div>
+        <p class="title">标签页</p>
+        <tabs-demo />
+      </div>
+      <div>
+        <p class="title">面包屑</p>
+        <breadcrumb-demo />
+      </div>
+      <div>
+        <p class="title">对话框</p>
+        <dialog-demo />
+      </div>
+      <div>
+        <p class="title">气泡</p>
+        <tooltip-demo />
+      </div>
+      <div>
+        <p class="title">下拉菜单</p>
+        <drop-down-demo />
+      </div>
+      <div>
+        <p class="title">导航栏</p>
+        <menu-demo />
+      </div>
+      <div>
+        <p class="title">表单</p>
+        <form-demo />
+      </div>
+      <div>
+        <p class="title">跑马灯</p>
+        <carousel-demo />
+      </div>
+      <div>
+        <p class="title">柱状图</p>
+        <bar-chart-demo />
+      </div>
     </div>
-    <div>
-      <p class="title">单选框</p>
-      <radio-demo />
-      <p class="title">多选框</p>
-      <checkbox-demo />
-    </div>
-    <div>
-      <p class="title">输入框</p>
-      <input-demo />
-    </div>
-    <div>
-      <p class="title">计数器</p>
-      <input-number-demo />
-    </div>
-    <div>
-      <p class="title">选择器</p>
-      <select-demo />
-    </div>
-    <div>
-      <p class="title">开关</p>
-      <switch-demo />
-    </div>
-    <div>
-      <p class="title">滑块</p>
-      <slider-demo />
-    </div>
-    <div>
-      <p class="title">时间选择器</p>
-      <time-picker-demo />
-    </div>
-    <div>
-      <p class="title">时间选择器</p>
-      <time-select-demo />
-    </div>
-    <div>
-      <p class="title">日期时间选择器</p>
-      <date-time-picker-demo />
-    </div>
-    <div>
-      <p class="title">表格</p>
-      <table-demo />
-    </div>
-    <div>
-      <p class="title">标签</p>
-      <tag-demo />
-    </div>
-    <div>
-      <p class="title">进度条</p>
-      <progress-demo />
-    </div>
-    <div>
-      <p class="title">分页</p>
-      <pagination-demo />
-    </div>
-    <div>
-      <p class="title">消息提示</p>
-      <message-demo />
-    </div>
-    <div>
-      <p class="title">弹框</p>
-      <message-box-demo />
-    </div>
-    <div>
-      <p class="title">通知</p>
-      <notification-demo />
-    </div>
-    <div>
-      <p class="title">标签页</p>
-      <tabs-demo />
-    </div>
-    <div>
-      <p class="title">面包屑</p>
-      <breadcrumb-demo />
-    </div>
-    <div>
-      <p class="title">对话框</p>
-      <dialog-demo />
-    </div>
-    <div>
-      <p class="title">气泡</p>
-      <tooltip-demo />
-    </div>
-    <div>
-      <p class="title">下拉菜单</p>
-      <drop-down-demo />
-    </div>
-    <div>
-      <p class="title">导航栏</p>
-      <menu-demo />
-    </div>
-    <div>
-      <p class="title">表单</p>
-      <form-demo />
-    </div>
-    <div>
-      <p class="title">跑马灯</p>
-      <carousel-demo />
-    </div>
-    <div>
-      <p class="title">柱状图</p>
-      <bar-chart-demo />
-    </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script>
@@ -199,12 +201,12 @@ body {
   border-collapse: separate;
   text-indent: initial;
 }
-.ur-popper th, .ur-popper td {
+.ur-popper th,
+.ur-popper td {
   border: initial;
 }
 .ur-popper tr:nth-child(2n) {
   background-color: initial;
 }
 /* 修复vitepress默认样式影响 end */
-
 </style>

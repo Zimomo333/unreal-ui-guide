@@ -1,7 +1,9 @@
 
 <template>
-  <ur-button class="space" plain @click="open1">可自动关闭</ur-button>
-  <ur-button class="space" plain @click="open2">不会自动关闭</ur-button>
+  <ClientOnly>
+    <ur-button class="space" plain @click="open1">可自动关闭</ur-button>
+    <ur-button class="space" plain @click="open2">不会自动关闭</ur-button>
+  </ClientOnly>
 </template>
 
 <script>

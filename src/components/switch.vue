@@ -1,8 +1,10 @@
 <template>
-  <ur-switch class="space" v-model="value1"></ur-switch>
-  <ur-switch class="space" v-model="value2" active-text="激活" inactive-text="未激活"></ur-switch>
-  <ur-switch class="space" v-model="value3" disabled></ur-switch>
-  <ur-switch class="space" v-model="value4" disabled></ur-switch>
+  <ClientOnly>
+    <ur-switch class="space" v-model="value1"></ur-switch>
+    <ur-switch class="space" v-model="value2" active-text="激活" inactive-text="未激活"></ur-switch>
+    <ur-switch class="space" v-model="value3" disabled></ur-switch>
+    <ur-switch class="space" v-model="value4" disabled></ur-switch>
+  </ClientOnly>
 </template>
 
 <script>

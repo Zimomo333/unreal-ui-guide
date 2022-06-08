@@ -1,7 +1,9 @@
 <template>
-  <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
-  <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
-  <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
+  <ClientOnly>
+    <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
+    <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
+    <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
+  </ClientOnly>
 </template>
 
 <script>

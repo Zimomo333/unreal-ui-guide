@@ -1,18 +1,27 @@
 
 <template>
-  <ur-input-number class="input-number-space" v-model="num1" @change="handleChange" :min="1" :max="10" label="描述文字"></ur-input-number>
-  <ur-input-number class="input-number-space" v-model="num2" :step="2"></ur-input-number>
-  <ur-input-number class="input-number-space" v-model="num3" :disabled="true"></ur-input-number>
-  <br/>
-  <ur-input-number class="input-number-space" v-model="num4" :precision="2" :step="0.1" :max="10"></ur-input-number>
-  <ur-input-number
-    class="input-number-space"
-    v-model="num5"
-    controls-position="right"
-    @change="handleChange"
-    :min="1"
-    :max="10"
-  ></ur-input-number>
+  <ClientOnly>
+    <ur-input-number
+      class="input-number-space"
+      v-model="num1"
+      @change="handleChange"
+      :min="1"
+      :max="10"
+      label="描述文字"
+    ></ur-input-number>
+    <ur-input-number class="input-number-space" v-model="num2" :step="2"></ur-input-number>
+    <ur-input-number class="input-number-space" v-model="num3" :disabled="true"></ur-input-number>
+    <br />
+    <ur-input-number class="input-number-space" v-model="num4" :precision="2" :step="0.1" :max="10"></ur-input-number>
+    <ur-input-number
+      class="input-number-space"
+      v-model="num5"
+      controls-position="right"
+      @change="handleChange"
+      :min="1"
+      :max="10"
+    ></ur-input-number>
+  </ClientOnly>
 </template>
 
 <script>

@@ -1,46 +1,36 @@
 
 <template>
-  <div class="block">
-    <span class="demonstration">默认</span>
-    <ur-slider v-model="value1"></ur-slider>
-  </div>
-  <div class="block">
-    <span class="demonstration">隐藏 Tooltip</span>
-    <ur-slider v-model="value2" :show-tooltip="false"></ur-slider>
-  </div>
-  <div class="block">
-    <span class="demonstration">禁用</span>
-    <ur-slider v-model="value3" disabled></ur-slider>
-  </div>
-  <div class="block">
-    <span class="demonstration">不显示间断点</span>
-    <ur-slider v-model="value4" :step="10"></ur-slider>
-  </div>
-  <div class="block">
-    <span class="demonstration">显示间断点</span>
-    <ur-slider v-model="value5" :step="10" show-stops></ur-slider>
-  </div>
-  <div class="block">
-    <ur-slider
-      v-model="value6"
-      show-input>
-    </ur-slider>
-  </div>
-  <div class="block">
-    <ur-slider
-      v-model="value7"
-      range
-      show-stops
-      :max="10">
-    </ur-slider>
-  </div>
-  <div class="block">
-    <ur-slider
-      v-model="value8"
-      vertical
-      height="200px">
-    </ur-slider>
-  </div>
+  <ClientOnly>
+    <div class="block">
+      <span class="demonstration">默认</span>
+      <ur-slider v-model="value1"></ur-slider>
+    </div>
+    <div class="block">
+      <span class="demonstration">隐藏 Tooltip</span>
+      <ur-slider v-model="value2" :show-tooltip="false"></ur-slider>
+    </div>
+    <div class="block">
+      <span class="demonstration">禁用</span>
+      <ur-slider v-model="value3" disabled></ur-slider>
+    </div>
+    <div class="block">
+      <span class="demonstration">不显示间断点</span>
+      <ur-slider v-model="value4" :step="10"></ur-slider>
+    </div>
+    <div class="block">
+      <span class="demonstration">显示间断点</span>
+      <ur-slider v-model="value5" :step="10" show-stops></ur-slider>
+    </div>
+    <div class="block">
+      <ur-slider v-model="value6" show-input></ur-slider>
+    </div>
+    <div class="block">
+      <ur-slider v-model="value7" range show-stops :max="10"></ur-slider>
+    </div>
+    <div class="block">
+      <ur-slider v-model="value8" vertical height="200px"></ur-slider>
+    </div>
+  </ClientOnly>
 </template>
 
 <script>

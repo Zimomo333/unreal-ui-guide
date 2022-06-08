@@ -1,27 +1,29 @@
 
 <template>
-  <div class="tabs_wrap">
-    <ur-tabs v-model="activeName">
-      <ur-tab-pane label="用户管理" name="first">用户管理</ur-tab-pane>
-      <ur-tab-pane label="配置管理" name="second">配置管理</ur-tab-pane>
-      <ur-tab-pane label="角色管理" name="third">角色管理</ur-tab-pane>
-      <ur-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</ur-tab-pane>
-    </ur-tabs>
+  <ClientOnly>
+    <div class="tabs_wrap">
+      <ur-tabs v-model="activeName">
+        <ur-tab-pane label="用户管理" name="first">用户管理</ur-tab-pane>
+        <ur-tab-pane label="配置管理" name="second">配置管理</ur-tab-pane>
+        <ur-tab-pane label="角色管理" name="third">角色管理</ur-tab-pane>
+        <ur-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</ur-tab-pane>
+      </ur-tabs>
 
-    <ur-radio-group v-model="tabPosition" style="margin: 2.5rem 0 1rem;">
-      <ur-radio label="top">top</ur-radio>
-      <ur-radio label="right">right</ur-radio>
-      <ur-radio label="bottom">bottom</ur-radio>
-      <ur-radio label="left">left</ur-radio>
-    </ur-radio-group>
+      <ur-radio-group v-model="tabPosition" style="margin: 2.5rem 0 1rem;">
+        <ur-radio label="top">top</ur-radio>
+        <ur-radio label="right">right</ur-radio>
+        <ur-radio label="bottom">bottom</ur-radio>
+        <ur-radio label="left">left</ur-radio>
+      </ur-radio-group>
 
-    <ur-tabs :tab-position="tabPosition">
-      <ur-tab-pane label="用户管理">用户管理</ur-tab-pane>
-      <ur-tab-pane label="配置管理">配置管理</ur-tab-pane>
-      <ur-tab-pane label="角色管理">角色管理</ur-tab-pane>
-      <ur-tab-pane label="定时任务补偿">定时任务补偿</ur-tab-pane>
-    </ur-tabs>
-  </div>
+      <ur-tabs :tab-position="tabPosition">
+        <ur-tab-pane label="用户管理">用户管理</ur-tab-pane>
+        <ur-tab-pane label="配置管理">配置管理</ur-tab-pane>
+        <ur-tab-pane label="角色管理">角色管理</ur-tab-pane>
+        <ur-tab-pane label="定时任务补偿">定时任务补偿</ur-tab-pane>
+      </ur-tabs>
+    </div>
+  </ClientOnly>
 </template>
 
 <script>

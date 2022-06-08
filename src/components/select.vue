@@ -1,30 +1,32 @@
 <template>
-  <ur-select class="select-space" v-model="value1" placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
-  <ur-select class="select-space" v-model="value2" placeholder="请选择">
-    <ur-option
-      v-for="item in options2"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-      :disabled="item.disabled"
-    ></ur-option>
-  </ur-select>
-  <ur-select class="select-space" v-model="value3" disabled placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
-  <ur-select class="select-space" v-model="value3" clearable placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
+  <ClientOnly>
+    <ur-select class="select-space" v-model="value1" placeholder="请选择">
+      <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+    </ur-select>
+    <ur-select class="select-space" v-model="value2" placeholder="请选择">
+      <ur-option
+        v-for="item in options2"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+        :disabled="item.disabled"
+      ></ur-option>
+    </ur-select>
+    <ur-select class="select-space" v-model="value3" disabled placeholder="请选择">
+      <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+    </ur-select>
+    <ur-select class="select-space" v-model="value3" clearable placeholder="请选择">
+      <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+    </ur-select>
 
-  <ur-select class="select-space" v-model="value4" multiple placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
+    <ur-select class="select-space" v-model="value4" multiple placeholder="请选择">
+      <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+    </ur-select>
 
-  <ur-select class="select-space" v-model="value5" multiple collapse-tags placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
+    <ur-select class="select-space" v-model="value5" multiple collapse-tags placeholder="请选择">
+      <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+    </ur-select>
+  </ClientOnly>
 </template>
 
 <script>
