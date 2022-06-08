@@ -46,5 +46,6 @@ export default {
 <style scoped>
 .input-number-space {
   margin: 1rem 1.4rem;
+  text-align: center;
 }
 </style>
