@@ -1,10 +1,9 @@
 module.exports = {
   title: 'UnrealUI',
   themeConfig: {
-    repo: 'https://github.com/Zimomo333/unreal-ui-next',
-    docsRepo: 'https://github.com/Zimomo333/unreal-ui-guide',
+    docsRepo: 'https://github.com/Zimomo333/unreal-ui-next',
     docsDir: 'docs',
-    editLinks: true,
+    editLinks: false,
     editLinkText: '在 GitHub 上编辑此页',
     sidebar: [
       {
